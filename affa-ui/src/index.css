@@ -1,0 +1,250 @@
+:root {
+  --soil: #2C2418;
+  --paper: #F7F4EC;
+  --sage: #5C7A5C;
+  --sage-dark: #3E5940;
+  --butter: #E8B84B;
+  --line: #DCD5C2;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--soil);
+  font-family: 'Public Sans', sans-serif;
+}
+
+.state-message {
+  max-width: 480px;
+  margin: 4rem auto;
+  text-align: center;
+  font-family: 'Public Sans', sans-serif;
+  line-height: 1.6;
+}
+
+.state-message code {
+  background: #eee6d3;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+.page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
+
+.hero {
+  background: var(--soil);
+  color: var(--paper);
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--butter);
+  font-weight: 600;
+}
+
+.hero h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0.6rem 0 0.7rem;
+}
+
+.subhead {
+  color: #D8D2C0;
+  max-width: 500px;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+.filters { display: flex; gap: 0.5rem; }
+
+.chip {
+  border: 1px solid var(--line);
+  background: white;
+  color: var(--soil);
+  padding: 0.4rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: all 0.15s ease;
+}
+
+.chip:hover { border-color: var(--sage); }
+
+.chip.active {
+  background: var(--soil);
+  color: var(--paper);
+  border-color: var(--soil);
+}
+
+.chip.active.chip-funder { background: var(--butter); color: #4A3610; border-color: var(--butter); }
+.chip.active.chip-partner { background: var(--sage-dark); color: white; border-color: var(--sage-dark); }
+
+.chip-count {
+  font-size: 0.75rem;
+  opacity: 0.75;
+}
+
+.search {
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  min-width: 260px;
+  font-family: inherit;
+  background: white;
+}
+
+.search:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 1px;
+}
+
+.table-wrap {
+  margin: 0 1.5rem;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7A7461;
+  background: #F0EBDB;
+  border-bottom: 1px solid var(--line);
+}
+
+.row td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  cursor: pointer;
+}
+
+.row:hover td { background: #FBF9F3; }
+
+.row-open td { background: #F3EFE1; }
+
+.name-cell {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.link-out {
+  color: var(--sage);
+  text-decoration: none;
+  font-size: 0.85em;
+}
+
+.muted { color: #8A8266; }
+
+.focus-cell {
+  max-width: 320px;
+  color: #4A4530;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.tag-funder { background: #E8B84B33; color: #8A6414; }
+.tag-partner { background: #5C7A5C33; color: var(--sage-dark); }
+
+.status-drafted {
+  color: var(--sage-dark);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.status-pending {
+  color: #ADA68C;
+  font-size: 0.85rem;
+}
+
+.detail-row td {
+  padding: 0;
+  border-bottom: 1px solid var(--line);
+  cursor: default;
+}
+
+.detail-box {
+  background: #FBF9F3;
+  padding: 1.2rem 1.5rem;
+  border-left: 3px solid var(--sage);
+  margin: 0.5rem 1rem 1rem;
+  border-radius: 6px;
+}
+
+.detail-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #7A7461;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.detail-message {
+  font-family: 'Fraunces', serif;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: var(--soil);
+  margin: 0 0 1rem;
+  white-space: pre-line;
+}
+
+.detail-fit {
+  font-size: 0.88rem;
+  color: #5A5540;
+  margin: 0;
+}
+
+.empty-state {
+  padding: 2.5rem;
+  text-align: center;
+  color: #8A8266;
+}

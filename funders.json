@@ -1,0 +1,107 @@
+[
+  {
+    "name": "USDA Urban Agriculture and Innovative Production (UAIP) Grants",
+    "type": "government",
+    "focus_area": "Urban agriculture, food production and access, job training, and education in urban and suburban communities",
+    "fit_reason": "A Farm For All's community farm model producing microgreens and herbs with educational programming aligns directly with UAIP's support for nonprofit urban farms increasing food access and providing training.",
+    "url": "https://www.nifa.usda.gov/grants/programs/urban-agriculture-innovative-production"
+  },
+  {
+    "name": "USDA NIFA Community Food Projects Competitive Grant Program (CFPCGP)",
+    "type": "government",
+    "focus_area": "Community-driven food security projects, local food systems, nutrition education, and food access for low-income communities",
+    "fit_reason": "A Farm For All's mission to expand healthy food access and community food production matches CFPCGP's goal of funding nonprofit projects that reduce food insecurity and build self-sustaining local food systems.",
+    "url": "https://www.nifa.usda.gov/grants/funding-opportunities/community-food-projects-competitive-grants-program"
+  },
+  {
+    "name": "USDA Specialty Crop Block Grant Program (SCBGP)",
+    "type": "government",
+    "focus_area": "Enhancing the competitiveness of specialty crops including fruits, vegetables, herbs, and horticulture through marketing, education, and research",
+    "fit_reason": "A Farm For All's production of microgreens and herbs qualifies as specialty crops, making this program a strong fit for projects that increase child and adult nutrition knowledge and consumption of these crops.",
+    "url": "https://www.ams.usda.gov/services/grants/scbgp"
+  },
+  {
+    "name": "HUD Community Development Block Grant (CDBG) Program",
+    "type": "government",
+    "focus_area": "Community development, decent housing, suitable living environments, and economic opportunity for low- and moderate-income persons",
+    "fit_reason": "A Farm For All can partner with its local municipality to access CDBG funds as a subrecipient for public service activities including food access, community wellness, and youth programming in low-income neighborhoods.",
+    "url": "https://www.hudexchange.info/programs/cdbg/"
+  },
+  {
+    "name": "Whole Kids Foundation (Whole Foods Market Foundation) Garden Grant",
+    "type": "corporate",
+    "focus_area": "Edible educational gardens at K-12 schools and nonprofit organizations supporting children's nutrition and wellness",
+    "fit_reason": "A Farm For All's youth programming and community farm model directly supports hands-on agricultural education for children, matching Whole Kids' annual grant program for nonprofits running edible learning spaces.",
+    "url": "https://www.wholefoodsmarketfoundation.org/our-work/childrens-nutrition/garden-grant"
+  },
+  {
+    "name": "W.K. Kellogg Foundation \u2013 Food Systems Grants",
+    "type": "foundation",
+    "focus_area": "Equitable food systems, health equity, early childhood education, and racial equity for children and families in low-income communities",
+    "fit_reason": "A Farm For All's work expanding land access, healthy food, and youth agricultural education in underserved communities aligns with WKKF's food systems and community well-being priorities.",
+    "url": "https://www.wkkf.org/i/usa-food-systems-work/"
+  },
+  {
+    "name": "Conagra Brands Foundation \u2013 Community Impact Grants (Nourish Our Community)",
+    "type": "corporate",
+    "focus_area": "Direct food access, cooking skills, nutrition education, healthy and active lifestyles, and urban agriculture",
+    "fit_reason": "A Farm For All's urban farm producing food for the community while providing nutrition education and agricultural training fits squarely within Conagra's five funded focus areas, including urban agriculture.",
+    "url": "https://www.conagrabrands.com/our-company/conagra-brands-foundation/community-impact-grants"
+  },
+  {
+    "name": "Chick-fil-A True Inspiration Awards",
+    "type": "corporate",
+    "focus_area": "Nonprofits making community impact in areas of caring for people, caring through food, community strengthening, and environmental stewardship",
+    "fit_reason": "A Farm For All's dual focus on food access and youth community programming aligns with the program's 'Caring Through Food' and 'Caring for Communities' award categories, with grants ranging from $30,000\u2013$350,000.",
+    "url": "https://www.chick-fil-a.com/true-inspiration-awards"
+  },
+  {
+    "name": "Walmart Foundation \u2013 Spark Good Local Grants",
+    "type": "corporate",
+    "focus_area": "Hunger relief, healthy food access, food recovery, and local community needs for nonprofits near Walmart locations",
+    "fit_reason": "A Farm For All's focus on healthy food access and community wellness makes it eligible for Walmart's local store-level grants supporting food access programs in the communities where Walmart operates.",
+    "url": "https://www.walmart.org/how-we-give/open-applications"
+  },
+  {
+    "name": "Wildseeds Fund (Food and Farm Communications Fund) \u2013 Wildseeds Grants",
+    "type": "foundation",
+    "focus_area": "Strategic communications and narrative capacity-building for grassroots food and agricultural systems change organizations, prioritizing BIPOC-led groups",
+    "fit_reason": "A Farm For All can apply for Wildseeds Grants to amplify its story and build community power around land access and food justice, with grants from $20,000\u2013$50,000 for organizations with revenues under $3 million.",
+    "url": "https://wildseedsfund.org/our-work/wildseeds-grants/"
+  },
+  {
+    "name": "Claneil Foundation \u2013 Community Fund Grant",
+    "type": "foundation",
+    "focus_area": "Hunger, nutrition, and food systems; health and human services; education; and environment for small nonprofits in the Philadelphia region",
+    "fit_reason": "A Farm For All's work in urban agriculture, food access, and community wellness aligns with Claneil's 2026 funding focus on Hunger, Nutrition, and Food Systems, with multi-year general operating support available to organizations with budgets under $1 million.",
+    "url": "https://claneil.org/programs/community-fund/"
+  },
+  {
+    "name": "Northeast Agricultural Education Foundation (NAEF) \u2013 Youth Agricultural Education Grants",
+    "type": "foundation",
+    "focus_area": "Youth agricultural education programs through 501(c)(3) nonprofits, including workshops, apprenticeships, and hands-on farming experiences",
+    "fit_reason": "A Farm For All's youth programming and on-farm agricultural education for young learners directly matches NAEF's mission to fund community-based nonprofits removing barriers to agricultural education.",
+    "url": "https://www.northeastagriculture.org/agricultural-education-grants/youth-agricultural-education-grants/"
+  },
+  {
+    "name": "Robert Wood Johnson Foundation (RWJF) \u2013 Healthy Communities / Health Equity Programs",
+    "type": "foundation",
+    "focus_area": "Health equity, social determinants of health (including food and nutrition access), community-led solutions, and community resilience",
+    "fit_reason": "A Farm For All's community wellness programming and healthy food access initiatives for underserved populations align with RWJF's social determinants of health and community-led solutions funding priorities.",
+    "url": "https://www.rwjf.org/en/grants/active-funding-opportunities.html"
+  },
+  {
+    "name": "NY State Urban Farms and Community Gardens Grant Program",
+    "type": "government",
+    "focus_area": "Food production, food safety, food distribution, and food resiliency through urban farms, school gardens, and community gardens in New York State",
+    "fit_reason": "A Farm For All's community farm operations producing food and providing agricultural education align with this state program's support for urban farms enhancing local food resiliency and food security for New Yorkers.",
+    "url": "https://agriculture.ny.gov/rfa-0344-urban-farms-and-community-gardens-grant-program"
+  },
+  {
+    "name": "Claneil Foundation \u2013 Emerging Leaders Fund",
+    "type": "foundation",
+    "focus_area": "Early-stage nonprofit organizations in the New England and Mid-Atlantic states working on food systems, health, environment, or education with budgets under $1 million",
+    "fit_reason": "If A Farm For All is in its early organizational years, this fund offers four-year unrestricted general operating support of up to $332,000 for social entrepreneurs building community-serving nonprofits in the region.",
+    "url": "https://claneil.org/programs/emerging-leaders-fund/"
+  }
+]
