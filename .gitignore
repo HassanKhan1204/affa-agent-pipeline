@@ -13,11 +13,12 @@ dist/
 .env
 .env.local
 
-# Generated data (regenerate with the agent scripts instead of committing)
+# Generated locally, but NOTE: funders.json, partners.json, leads.json,
+# and docs/index.html are intentionally tracked in git — the daily
+# GitHub Actions workflow updates and commits them automatically.
+# Only the local SQLite file itself stays untracked (it's rebuilt fresh
+# from the JSON files every run, so there's nothing lost by ignoring it).
 affa_crm.db
-funders.json
-partners.json
-leads.json
 affa_campaign.html
 
 # OS junk

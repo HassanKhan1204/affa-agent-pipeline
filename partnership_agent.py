@@ -1,28 +1,26 @@
 """
-AFFA Partnership Agent — Step 2 prototype
+AFFA Partnership Agent — with daily dedup support
 
-What this does:
-  Same pattern as funding_agent.py, but searches for potential PARTNER
-  organizations instead of funders: schools, food-access orgs, healthcare
-  organizations, restaurants, farmers markets, other nonprofits.
+Same dedup pattern as funding_agent.py, but for potential community
+partners instead of funders.
 
 Run:
   python partnership_agent.py
-
-Requires:
-  pip install anthropic   (already installed if you ran funding_agent.py)
-  ANTHROPIC_API_KEY already set as an environment variable
 """
 
 import json
+import os
 from anthropic import Anthropic
 
-client = Anthropic()  # reads ANTHROPIC_API_KEY from env automatically
+client = Anthropic()
 
 AFFA_MISSION = """
-A Farm For All is a 501(c)(3) community farm working to expand access to land,
-healthy food, agricultural education, microgreens, herbs, youth programming,
-and community wellness.
+A Farm For All is a 501(c)(3) community farm on 46 acres in Webatuck, New York
+(Dutchess County, near the Connecticut border, roughly 90 minutes north of
+New York City). It works to expand access to land, healthy food, agricultural
+education, microgreens, herbs, youth programming, and community wellness for
+under-served communities, families, and urban neighbors from the greater
+NYC / Hudson Valley region.
 """
 
 SYSTEM_PROMPT = """You are a research agent for a nonprofit. You use web search
@@ -44,23 +42,46 @@ preamble, no commentary) where each item has this exact shape:
 
 Only include real organizations you found through search. If you are not
 confident something is real and current, leave it out rather than guessing.
-Prefer organizations that are geographically plausible community partners
-(local/regional) over large national chains, unless a national org has a
-clear local-partnership program.
+Strongly prefer organizations located in or serving Dutchess County NY,
+the wider Hudson Valley, western Connecticut, or New York City boroughs
+(especially the Bronx and other under-served urban neighborhoods) over
+generic national organizations with no clear local presence. A national
+org is only acceptable if it has a specific chapter, office, or program
+operating in this region.
+
+Do NOT include any organization already in the "already found" list you're
+given — every result must be new.
 """
 
+PARTNERS_PATH = "partners.json"
 
-def find_partners(mission: str, count: int = 15) -> list[dict]:
+
+def load_existing() -> list[dict]:
+    if os.path.exists(PARTNERS_PATH):
+        with open(PARTNERS_PATH, "r") as f:
+            return json.load(f)
+    return []
+
+
+def find_new_partners(mission: str, existing: list[dict], count: int = 5) -> list[dict]:
+    existing_names = [p["name"] for p in existing]
+    existing_list_text = "\n".join(f"- {name}" for name in existing_names) or "(none yet)"
+
     user_prompt = f"""
 Nonprofit mission:
 {mission}
 
-Research and return {count} real organizations that would make strong
-community partners for this nonprofit. Look across these categories:
-schools (especially those with garden/nutrition programs), other food-access
-nonprofits, healthcare organizations focused on community health or
-nutrition, restaurants interested in local sourcing, farmers markets, and
-youth-serving community organizations.
+We already have these partners in our list — do NOT repeat any of them:
+{existing_list_text}
+
+Research and return {count} NEW real organizations that would make strong
+community partners for this nonprofit, not already in the list above. Look
+across these categories: schools (especially those with garden/nutrition
+programs), other food-access nonprofits, healthcare organizations focused
+on community health or nutrition, restaurants interested in local sourcing,
+farmers markets, and youth-serving community organizations. It's fine to
+return fewer than {count} if you can't find enough genuinely new, real,
+current organizations — never repeat or invent to hit the count.
 
 Return ONLY the JSON array as specified.
 """
@@ -73,36 +94,41 @@ Return ONLY the JSON array as specified.
         tools=[{"type": "web_search_20250305", "name": "web_search"}],
     )
 
-    full_text = "".join(
-        block.text for block in response.content if block.type == "text"
-    )
-
+    full_text = "".join(block.text for block in response.content if block.type == "text")
     cleaned = full_text.strip()
     if cleaned.startswith("```"):
-        cleaned = cleaned.strip("`")
-        cleaned = cleaned.replace("json", "", 1).strip()
+        cleaned = cleaned.strip("`").replace("json", "", 1).strip()
 
     try:
-        partners = json.loads(cleaned)
+        new_partners = json.loads(cleaned)
     except json.JSONDecodeError:
         print("--- RAW MODEL OUTPUT (failed to parse) ---")
         print(full_text)
         raise
 
-    return partners
+    return new_partners
+
+
+def merge(existing: list[dict], new: list[dict]) -> list[dict]:
+    existing_names_lower = {p["name"].strip().lower() for p in existing}
+    deduped_new = [p for p in new if p["name"].strip().lower() not in existing_names_lower]
+    return existing + deduped_new
 
 
 if __name__ == "__main__":
-    print("Researching potential partners for A Farm For All...\n")
-    partners = find_partners(AFFA_MISSION, count=15)
+    existing = load_existing()
+    print(f"Already have {len(existing)} partners on file.")
 
-    print(f"Found {len(partners)} leads:\n")
-    for p in partners:
-        print(f"- [{p['type']}] {p['name']}")
-        print(f"  Focus: {p['focus_area']}")
-        print(f"  Angle: {p['partnership_angle']}")
-        print(f"  URL: {p.get('url', '')}\n")
+    print("Researching new partners for A Farm For All...\n")
+    new_partners = find_new_partners(AFFA_MISSION, existing, count=5)
 
-    with open("partners.json", "w") as f:
-        json.dump(partners, f, indent=2)
-    print("Saved to partners.json")
+    merged = merge(existing, new_partners)
+    added = len(merged) - len(existing)
+
+    print(f"Found {len(new_partners)} candidates, added {added} genuinely new leads:\n")
+    for lead in new_partners:
+        print(f"- [{lead['type']}] {lead['name']}")
+
+    with open(PARTNERS_PATH, "w") as f:
+        json.dump(merged, f, indent=2)
+    print(f"\nSaved. Total partners now: {len(merged)}")

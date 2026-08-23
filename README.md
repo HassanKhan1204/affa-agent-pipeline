@@ -65,6 +65,28 @@ npm install
 npm run dev                                  # open the printed localhost URL
 ```
 
+## Automatic daily updates
+
+This repo runs itself. A GitHub Actions workflow
+(`.github/workflows/daily-update.yml`) runs the full pipeline every day,
+finds new funders and partners (skipping anything already found), and
+publishes a refreshed campaign page via GitHub Pages — no laptop required.
+
+**One-time setup:**
+
+1. **Add your API key as a secret** — repo Settings → Secrets and variables
+   → Actions → New repository secret → name it `ANTHROPIC_API_KEY`, paste
+   your key as the value.
+2. **Enable GitHub Pages** — repo Settings → Pages → Source: "Deploy from a
+   branch" → Branch: `main`, folder: `/docs` → Save. Your live page will be
+   at `https://<username>.github.io/<repo-name>/`.
+3. **(Optional) Trigger it manually the first time** — Actions tab → "Daily
+   AFFA Pipeline Update" → Run workflow, instead of waiting for the next
+   scheduled run.
+
+After that, it runs daily on its own, growing the lead list and
+re-publishing the page automatically.
+
 ## Notes / limitations
 
 - Web-search-grounded results are far more reliable than pure model recall,

@@ -20,13 +20,16 @@ Output:
 """
 
 import json
+import os
 import sqlite3
+from datetime import datetime, timezone
 from anthropic import Anthropic
 
 client = Anthropic()
 
 DB_PATH = "affa_crm.db"
-OUTPUT_PATH = "affa_campaign.html"
+OUTPUT_DIR = "docs"
+OUTPUT_PATH = "docs/index.html"
 
 SYSTEM_PROMPT = """You write short campaign copy for a small nonprofit
 community farm's landing page. You are given real numbers and real
@@ -340,7 +343,11 @@ def render_html(copy: dict, stats: dict) -> str:
     </table>
   </main>
 
-  <footer>Built by a coordinated team of AI agents for A Farm For All.</footer>
+  <footer>
+    Built by a coordinated team of AI agents for A Farm For All.<br>
+    Last updated {datetime.now(timezone.utc).strftime('%B %d, %Y at %H:%M UTC')} &middot;
+    updates automatically every day.
+  </footer>
 
 </body>
 </html>
@@ -358,8 +365,11 @@ if __name__ == "__main__":
     print(f"\nHeadline: {copy['headline']}")
     print(f"Subhead: {copy['subhead']}\n")
 
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
     html = render_html(copy, stats)
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         f.write(html)
 
     print(f"Saved campaign page to {OUTPUT_PATH} — open it in your browser.")
+    print("This is the file GitHub Pages will publish at your public URL.")
