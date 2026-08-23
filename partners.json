@@ -103,5 +103,47 @@
     "focus_area": "Georgia nonprofit matching SNAP/EBT dollars dollar-for-dollar at partner farmers markets and retailers for locally grown fruits and vegetables, plus produce prescriptions",
     "partnership_angle": "A Farm For All could enroll as a Fresh For Less partner farm site, allowing SNAP shoppers to double their benefits when purchasing the farm's microgreens, herbs, and produce.",
     "url": "https://wholesomewavegeorgia.org"
+  },
+  {
+    "name": "Dutchess Outreach",
+    "type": "nonprofit",
+    "focus_area": "Largest food security nonprofit in Dutchess County, operating a food pantry, mobile food pantry, community meal program (The Lunch Box), urban farm in Poughkeepsie, and fresh market distributing local produce to low-income residents",
+    "partnership_angle": "A Farm For All could supply fresh microgreens, herbs, and produce directly to Dutchess Outreach's pantry, fresh market, and mobile food pantry serving the tri-corner region near Webatuck, deepening the local farm-to-community pipeline.",
+    "url": "https://dutchessoutreach.org"
+  },
+  {
+    "name": "Common Ground Farm",
+    "type": "nonprofit",
+    "focus_area": "Food justice nonprofit in Wappingers Falls/Beacon, NY growing organic produce for donation to food pantries, running the Beacon and Newburgh Farmers' Markets, operating farm-based education programs for youth, and a Farm to School initiative with the Beacon City School District",
+    "partnership_angle": "A Farm For All could co-develop youth farm education programming and exchange fresh produce, with Common Ground serving as a distribution and market access partner across the mid-Hudson Valley.",
+    "url": "https://www.commongroundfarm.org"
+  },
+  {
+    "name": "Sun River Health (Amenia)",
+    "type": "healthcare",
+    "focus_area": "Federally Qualified Health Center in Amenia, NY (eastern Dutchess County) offering primary care, dental, behavioral health, pediatrics, nutrition, and WIC services to underserved populations regardless of ability to pay; hosts the Dutchess Outreach Mobile Food Pantry on-site",
+    "partnership_angle": "A Farm For All could partner with Sun River Health's Amenia clinic to provide fresh produce for their on-site garden and mobile food pantry, and co-create nutrition education programming for patients in the tri-corner area.",
+    "url": "https://www.sunriver.org/your-health/amenia-health-care/"
+  },
+  {
+    "name": "BronxWorks",
+    "type": "nonprofit",
+    "focus_area": "Bronx-based community nonprofit running seasonal farm stands sourcing Hudson Valley produce, a Youth Food Justice program employing Bronx youth, SNAP-Ed nutrition education, and a community food pantry serving underserved South Bronx families",
+    "partnership_angle": "A Farm For All could become a direct farm supplier for BronxWorks' Hudson Valley-sourced farm stands, while collaborating on youth field trips and urban-to-rural farm education exchanges between Bronx youth and Webatuck.",
+    "url": "https://bronxworks.org"
+  },
+  {
+    "name": "Second Chance Foods",
+    "type": "nonprofit",
+    "focus_area": "Food rescue nonprofit based in Brewster, NY rescuing surplus produce from farms, grocers, and distributors across Dutchess, Putnam, Westchester, Orange, and Fairfield (CT) counties, cooking it into nutritious meals, and distributing to 20+ hunger relief partners",
+    "partnership_angle": "A Farm For All could donate surplus or cosmetically imperfect produce directly to Second Chance Foods for rescue and redistribution, extending the farm's impact across the broader Hudson Valley region with zero waste.",
+    "url": "https://secondchancefoods.org"
+  },
+  {
+    "name": "Hudson Valley Farm Hub",
+    "type": "nonprofit",
+    "focus_area": "Nonprofit regenerative agriculture center on 1,600 acres in Hurley, NY offering professional farmer training, agricultural research, farmland access resources, and equity-focused education programs for historically marginalized growers in the Hudson Valley",
+    "partnership_angle": "A Farm For All could collaborate with the Farm Hub on shared farmer training workshops, land access resources, and educational programming, particularly around microgreens, herb production, and equitable farm business development.",
+    "url": "https://hvfarmhub.org"
   }
 ]

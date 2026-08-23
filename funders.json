@@ -103,5 +103,40 @@
     "focus_area": "Early-stage nonprofit organizations in the New England and Mid-Atlantic states working on food systems, health, environment, or education with budgets under $1 million",
     "fit_reason": "If A Farm For All is in its early organizational years, this fund offers four-year unrestricted general operating support of up to $332,000 for social entrepreneurs building community-serving nonprofits in the region.",
     "url": "https://claneil.org/programs/emerging-leaders-fund/"
+  },
+  {
+    "name": "Community Foundations of the Hudson Valley \u2013 Hudson Valley Farm Fresh Food Grant Program",
+    "type": "foundation",
+    "focus_area": "Increasing access to local, farm-fresh food for food-insecure individuals in Dutchess, Orange, Putnam, and Ulster counties",
+    "fit_reason": "A Farm For All is based in Dutchess County and directly serves food-insecure communities, making it an ideal candidate for this multi-year grant (up to $20,000/year for 3 years) targeting exactly its geographic footprint and mission.",
+    "url": "https://communityfoundationshv.org/grants/hudson-valley-farm-fresh-food-grant-program/"
+  },
+  {
+    "name": "New York Health Foundation \u2013 Healthy Food, Healthy Lives Program",
+    "type": "foundation",
+    "focus_area": "Advancing racial health equity in food systems; connecting New Yorkers with healthy, affordable food through community-led programs across New York State",
+    "fit_reason": "A Farm For All's work expanding food access for underserved communities in the Hudson Valley/NYC region aligns directly with NYHealth's strategies for healthy food systems planning and nutrition benefit programs.",
+    "url": "https://nyhealthfoundation.org/what-we-fund/"
+  },
+  {
+    "name": "Sprouts Healthy Communities Foundation \u2013 Grants Program",
+    "type": "corporate",
+    "focus_area": "Nutrition education, nutrition access, school gardening programs, and wellness for children and adults",
+    "fit_reason": "A Farm For All's youth gardening, microgreens, and community nutrition programs align with the Foundation's 'Sprouting School Gardens' and 'Growing Healthy Kids' grant categories for local nonprofits.",
+    "url": "https://www.sprouts.com/about/sprouts-foundation/"
+  },
+  {
+    "name": "NYS Beginning Farmer Competitive Grant Program (NYFVI / NYS Dept. of Agriculture and Markets)",
+    "type": "government",
+    "focus_area": "Supporting beginning farmers (10 years or less of experience) in New York State with start-up, infrastructure, equipment, land, and operational costs",
+    "fit_reason": "A Farm For All can leverage this program to support new or early-stage farmers it incubates on its 46-acre property, funding equipment, infrastructure, and training aligned with its agricultural education and land-access mission.",
+    "url": "https://nyfvi.org/grant-programs/producer-grants/beginning-farmer/2026-bf/"
+  },
+  {
+    "name": "Panera Bread Foundation Grant Program",
+    "type": "corporate",
+    "focus_area": "Empowering underserved and at-risk youth ages 10\u201318 through mentorship, leadership development, skills building, and college/workforce readiness",
+    "fit_reason": "A Farm For All's youth programming for under-served families in the greater NYC/Hudson Valley region fits the Foundation's focus on marginalized young people gaining skills and building relationships in their communities.",
+    "url": "https://www.panerabread.com/en-us/food-values/community.html"
   }
 ]
