@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / React
+node_modules/
+dist/
+.vite/
+
+# Environment / secrets
+.env
+.env.local
+
+# Generated data (regenerate with the agent scripts instead of committing)
+affa_crm.db
+funders.json
+partners.json
+leads.json
+affa_campaign.html
+
+# OS junk
+.DS_Store
+Thumbs.db
