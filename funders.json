@@ -55,7 +55,7 @@
     "contact_page": "https://www.wholefoodsmarketfoundation.org/our-work/childrens-nutrition/garden-grant"
   },
   {
-    "name": "W.K. Kellogg Foundation – Food Systems Grants",
+    "name": "W.K. Kellogg Foundation \u2013 Food Systems Grants",
     "type": "foundation",
     "focus_area": "Equitable food systems, health equity, early childhood education, and racial equity for children and families in low-income communities",
     "fit_reason": "A Farm For All's work expanding land access, healthy food, and youth agricultural education in underserved communities aligns with WKKF's food systems and community well-being priorities.",
@@ -66,7 +66,7 @@
     "contact_page": "https://www.wkkf.org/contact/"
   },
   {
-    "name": "Conagra Brands Foundation – Community Impact Grants (Nourish Our Community)",
+    "name": "Conagra Brands Foundation \u2013 Community Impact Grants (Nourish Our Community)",
     "type": "corporate",
     "focus_area": "Direct food access, cooking skills, nutrition education, healthy and active lifestyles, and urban agriculture",
     "fit_reason": "A Farm For All's urban farm producing food for the community while providing nutrition education and agricultural training fits squarely within Conagra's five funded focus areas, including urban agriculture.",
@@ -80,7 +80,7 @@
     "name": "Chick-fil-A True Inspiration Awards",
     "type": "corporate",
     "focus_area": "Nonprofits making community impact in areas of caring for people, caring through food, community strengthening, and environmental stewardship",
-    "fit_reason": "A Farm For All's dual focus on food access and youth community programming aligns with the program's 'Caring Through Food' and 'Caring for Communities' award categories, with grants ranging from $30,000–$350,000.",
+    "fit_reason": "A Farm For All's dual focus on food access and youth community programming aligns with the program's 'Caring Through Food' and 'Caring for Communities' award categories, with grants ranging from $30,000\u2013$350,000.",
     "url": "https://www.chick-fil-a.com/true-inspiration-awards",
     "contact_name": "",
     "contact_email": "",
@@ -88,7 +88,7 @@
     "contact_page": "https://www.chick-fil-a.com/true-inspiration-awards/learn-more"
   },
   {
-    "name": "Walmart Foundation – Spark Good Local Grants",
+    "name": "Walmart Foundation \u2013 Spark Good Local Grants",
     "type": "corporate",
     "focus_area": "Hunger relief, healthy food access, food recovery, and local community needs for nonprofits near Walmart locations",
     "fit_reason": "A Farm For All's focus on healthy food access and community wellness makes it eligible for Walmart's local store-level grants supporting food access programs in the communities where Walmart operates.",
@@ -99,10 +99,10 @@
     "contact_page": "https://www.walmart.org/how-we-give/faqs"
   },
   {
-    "name": "Wildseeds Fund (Food and Farm Communications Fund) – Wildseeds Grants",
+    "name": "Wildseeds Fund (Food and Farm Communications Fund) \u2013 Wildseeds Grants",
     "type": "foundation",
     "focus_area": "Strategic communications and narrative capacity-building for grassroots food and agricultural systems change organizations, prioritizing BIPOC-led groups",
-    "fit_reason": "A Farm For All can apply for Wildseeds Grants to amplify its story and build community power around land access and food justice, with grants from $20,000–$50,000 for organizations with revenues under $3 million.",
+    "fit_reason": "A Farm For All can apply for Wildseeds Grants to amplify its story and build community power around land access and food justice, with grants from $20,000\u2013$50,000 for organizations with revenues under $3 million.",
     "url": "https://wildseedsfund.org/our-work/wildseeds-grants/",
     "contact_name": "",
     "contact_email": "grants@growyourgiving.org",
@@ -110,7 +110,7 @@
     "contact_page": "https://wildseedsfund.org/our-work/wildseeds-grants/"
   },
   {
-    "name": "Claneil Foundation – Community Fund Grant",
+    "name": "Claneil Foundation \u2013 Community Fund Grant",
     "type": "foundation",
     "focus_area": "Hunger, nutrition, and food systems; health and human services; education; and environment for small nonprofits in the Philadelphia region",
     "fit_reason": "A Farm For All's work in urban agriculture, food access, and community wellness aligns with Claneil's 2026 funding focus on Hunger, Nutrition, and Food Systems, with multi-year general operating support available to organizations with budgets under $1 million.",
@@ -121,7 +121,7 @@
     "contact_page": "https://claneil.org/programs/community-fund/"
   },
   {
-    "name": "Northeast Agricultural Education Foundation (NAEF) – Youth Agricultural Education Grants",
+    "name": "Northeast Agricultural Education Foundation (NAEF) \u2013 Youth Agricultural Education Grants",
     "type": "foundation",
     "focus_area": "Youth agricultural education programs through 501(c)(3) nonprofits, including workshops, apprenticeships, and hands-on farming experiences",
     "fit_reason": "A Farm For All's youth programming and on-farm agricultural education for young learners directly matches NAEF's mission to fund community-based nonprofits removing barriers to agricultural education.",
@@ -132,7 +132,7 @@
     "contact_page": "https://www.northeastagriculture.org/contact/"
   },
   {
-    "name": "Robert Wood Johnson Foundation (RWJF) – Healthy Communities / Health Equity Programs",
+    "name": "Robert Wood Johnson Foundation (RWJF) \u2013 Healthy Communities / Health Equity Programs",
     "type": "foundation",
     "focus_area": "Health equity, social determinants of health (including food and nutrition access), community-led solutions, and community resilience",
     "fit_reason": "A Farm For All's community wellness programming and healthy food access initiatives for underserved populations align with RWJF's social determinants of health and community-led solutions funding priorities.",
@@ -154,7 +154,7 @@
     "contact_page": "https://agriculture.ny.gov/rfa-0344-urban-farms-and-community-gardens-grant-program"
   },
   {
-    "name": "Claneil Foundation – Emerging Leaders Fund",
+    "name": "Claneil Foundation \u2013 Emerging Leaders Fund",
     "type": "foundation",
     "focus_area": "Early-stage nonprofit organizations in the New England and Mid-Atlantic states working on food systems, health, environment, or education with budgets under $1 million",
     "fit_reason": "If A Farm For All is in its early organizational years, this fund offers four-year unrestricted general operating support of up to $332,000 for social entrepreneurs building community-serving nonprofits in the region.",
@@ -165,7 +165,7 @@
     "contact_page": "https://claneil.org/programs/emerging-leaders-fund/"
   },
   {
-    "name": "Community Foundations of the Hudson Valley – Hudson Valley Farm Fresh Food Grant Program",
+    "name": "Community Foundations of the Hudson Valley \u2013 Hudson Valley Farm Fresh Food Grant Program",
     "type": "foundation",
     "focus_area": "Increasing access to local, farm-fresh food for food-insecure individuals in Dutchess, Orange, Putnam, and Ulster counties",
     "fit_reason": "A Farm For All is based in Dutchess County and directly serves food-insecure communities, making it an ideal candidate for this multi-year grant (up to $20,000/year for 3 years) targeting exactly its geographic footprint and mission.",
@@ -176,7 +176,7 @@
     "contact_page": "https://communityfoundationshv.org/grants/hudson-valley-farm-fresh-food-grant-program/"
   },
   {
-    "name": "New York Health Foundation – Healthy Food, Healthy Lives Program",
+    "name": "New York Health Foundation \u2013 Healthy Food, Healthy Lives Program",
     "type": "foundation",
     "focus_area": "Advancing racial health equity in food systems; connecting New Yorkers with healthy, affordable food through community-led programs across New York State",
     "fit_reason": "A Farm For All's work expanding food access for underserved communities in the Hudson Valley/NYC region aligns directly with NYHealth's strategies for healthy food systems planning and nutrition benefit programs.",
@@ -187,7 +187,7 @@
     "contact_page": "https://nyhealthfoundation.org/apply-for-funding/"
   },
   {
-    "name": "Sprouts Healthy Communities Foundation – Grants Program",
+    "name": "Sprouts Healthy Communities Foundation \u2013 Grants Program",
     "type": "corporate",
     "focus_area": "Nutrition education, nutrition access, school gardening programs, and wellness for children and adults",
     "fit_reason": "A Farm For All's youth gardening, microgreens, and community nutrition programs align with the Foundation's 'Sprouting School Gardens' and 'Growing Healthy Kids' grant categories for local nonprofits.",
@@ -211,12 +211,67 @@
   {
     "name": "Panera Bread Foundation Grant Program",
     "type": "corporate",
-    "focus_area": "Empowering underserved and at-risk youth ages 10–18 through mentorship, leadership development, skills building, and college/workforce readiness",
+    "focus_area": "Empowering underserved and at-risk youth ages 10\u201318 through mentorship, leadership development, skills building, and college/workforce readiness",
     "fit_reason": "A Farm For All's youth programming for under-served families in the greater NYC/Hudson Valley region fits the Foundation's focus on marginalized young people gaining skills and building relationships in their communities.",
     "url": "https://www.panerabread.com/en-us/food-values/community.html",
     "contact_name": "",
     "contact_email": "",
     "contact_phone": "",
     "contact_page": "https://panerafoundation.versaic.com/"
+  },
+  {
+    "name": "Kubota Hometown Proud Grant Program",
+    "type": "corporate",
+    "focus_area": "Community improvement projects (community gardens, parks, agricultural education, food banks) where Kubota equipment can be utilized; open to all 501(c)(3) nonprofits nationwide",
+    "fit_reason": "A Farm For All's 46-acre working farm with community food access and agricultural education programming is an ideal candidate for the $25,000 cash + $25,000 equipment voucher grant awarded to nonprofits where Kubota machinery can directly support farm operations.",
+    "url": "https://www.kubotahometownproud.com",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://www.kubotausa.com/hometown-proud"
+  },
+  {
+    "name": "Simply Organic Giving Fund Grant Program",
+    "type": "corporate",
+    "focus_area": "Expanding access to organic, nutrient-dense food and reducing food insecurity for underserved communities in the US and Canada; grants of $30,000\u2013$150,000 over two years",
+    "fit_reason": "A Farm For All's mission to grow and distribute microgreens, herbs, and healthy food to underserved NYC/Hudson Valley communities directly aligns with the fund's focus on organic food access for food-insecure populations.",
+    "url": "https://www.simplyorganic.com/giving-back-2",
+    "contact_name": "",
+    "contact_email": "SOGrants@FrontierCoop.com",
+    "contact_phone": "",
+    "contact_page": "https://www.simplyorganic.com/giving-back-2"
+  },
+  {
+    "name": "Hudson Valley Foundation for Youth Health (HVFYH) \u2013 Mini-Grants & Emergency Grants",
+    "type": "foundation",
+    "focus_area": "Youth health, family support, physical and mental health, quality education, and child care for nonprofits in Columbia, Delaware, Greene, Ulster counties and northern Dutchess (Red Hook, Rhinebeck)",
+    "fit_reason": "A Farm For All is located in Dutchess County and runs youth programming\u2014squarely within HVFYH's geographic and programmatic focus on youth-serving organizations in the Hudson Valley.",
+    "url": "https://www.hvfyh.org",
+    "contact_name": "Barbara Mansfield",
+    "contact_email": "",
+    "contact_phone": "(845) 414-3391",
+    "contact_page": "https://www.hvfyh.org/emergency-grants"
+  },
+  {
+    "name": "NYS DEC Environmental Justice Community Impact Grant Program",
+    "type": "government",
+    "focus_area": "Community-based projects addressing environmental justice, including urban farming, food access, and community health for residents of environmentally overburdened NY communities; up to $100,000 per organization",
+    "fit_reason": "A Farm For All serves underserved communities near NYC in a region eligible for environmental justice funding, and its urban agriculture and food access work fits the DEC's mandate to fund community-driven environmental solutions.",
+    "url": "https://dec.ny.gov/environmental-justice/community-impact-grants",
+    "contact_name": "",
+    "contact_email": "ejgrants@dec.ny.gov",
+    "contact_phone": "518-402-8556",
+    "contact_page": "https://dec.ny.gov/environmental-justice/community-impact-grants"
+  },
+  {
+    "name": "Lowe's Community Impact Grants (Hometowns Program)",
+    "type": "corporate",
+    "focus_area": "Physical renovation and improvement of community spaces (gardens, parks, community centers, shelters) for nonprofits and municipalities; up to 100 projects funded annually, $10,000\u2013$100,000",
+    "fit_reason": "A Farm For All could receive infrastructure renovation support (greenhouse, educational pavilion, farm facilities) through this nomination-based grant that explicitly lists neighborhood gardens and community farms as eligible spaces.",
+    "url": "https://corporate.lowes.com/our-responsibilities/community-impact",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://corporate.lowes.com/our-responsibilities/community-impact/faqs"
   }
 ]

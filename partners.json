@@ -229,5 +229,60 @@
     "contact_email": "info@hvfarmhub.org",
     "contact_phone": "(845) 331-1187",
     "contact_page": "https://hvfarmhub.org/contact/"
+  },
+  {
+    "name": "Poughkeepsie Farm Project",
+    "type": "nonprofit",
+    "focus_area": "Community-supported agriculture, food access, farmer training, and produce donation for food-insecure neighbors in the Mid-Hudson Valley",
+    "partnership_angle": "A Farm For All could co-host farm-based educational programs, exchange produce or microgreens for distribution, and collaborate on food justice outreach reaching under-served families across Dutchess County.",
+    "url": "https://www.farmproject.org",
+    "contact_name": "Gina McCann",
+    "contact_email": "gina@farmproject.org",
+    "contact_phone": "914-214-3317",
+    "contact_page": "https://www.farmproject.org/contact"
+  },
+  {
+    "name": "Stonewood Community Project (Stonewood Farm)",
+    "type": "nonprofit",
+    "focus_area": "Certified organic market garden, food pantry, farmer apprentice training, and community food access programming in northeast Dutchess County",
+    "partnership_angle": "A Farm For All could partner on shared farm-to-pantry produce distribution, joint apprentice or youth training days, and collaborative pop-up markets serving food-insecure neighbors in the Millbrook/Dover corridor.",
+    "url": "https://stonewoodny.org",
+    "contact_name": "Kristen Essig",
+    "contact_email": "info@stonewoodny.org",
+    "contact_phone": "845-416-5524",
+    "contact_page": "https://stonewoodny.org"
+  },
+  {
+    "name": "North East Community Center (NECC)",
+    "type": "community_org",
+    "focus_area": "Rural community services covering food access, youth programs, after-school education, senior support, transportation, and the Millerton Farmers Market \u2014 serving the Amenia/Millerton/Webutuck area of northeast Dutchess County",
+    "partnership_angle": "A Farm For All could supply fresh produce and microgreens to NECC's food pantry and Millerton Farmers Market, and run joint youth agricultural programming aligned with NECC's after-school Webutuck partnership.",
+    "url": "https://www.neccmillerton.org",
+    "contact_name": "Brandon Wolfe",
+    "contact_email": "brandon@neccmillerton.org",
+    "contact_phone": "518-789-4259",
+    "contact_page": "https://www.neccmillerton.org/programs"
+  },
+  {
+    "name": "Glynwood Center for Regional Food and Farming",
+    "type": "nonprofit",
+    "focus_area": "Regenerative agriculture training, Hudson Valley food system coalition-building, farm business incubation, CSA coalition, and farmland access across the Hudson Valley",
+    "partnership_angle": "A Farm For All could join Glynwood's regional food system coalition, co-host farmer training or educational workshops, and connect with Glynwood's food access and CSA equity programs to amplify both organizations' reach.",
+    "url": "https://www.glynwood.org",
+    "contact_name": "",
+    "contact_email": "info@glynwood.org",
+    "contact_phone": "845-265-3338",
+    "contact_page": "https://www.glynwood.org/support/support.html"
+  },
+  {
+    "name": "Bronx Eats, Inc.",
+    "type": "nonprofit",
+    "focus_area": "Fresh produce distributions, plant-based cooking education, and the Fordham Farmers Market \u2014 serving food-insecure families and schools across the Bronx",
+    "partnership_angle": "A Farm For All could supply fresh-grown microgreens, herbs, and produce to Bronx Eats for its school distributions and Fordham Farmers Market, creating a direct farm-to-urban-community pipeline for under-served Bronx families.",
+    "url": "https://www.bronxeats.org",
+    "contact_name": "Gail Schorsch",
+    "contact_email": "info@bronxeats.org",
+    "contact_phone": "",
+    "contact_page": "https://www.bronxeats.org/faqs"
   }
 ]
