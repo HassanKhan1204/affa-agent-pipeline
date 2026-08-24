@@ -16,6 +16,13 @@ services:
 
   # Local Postgres for the CRM API. Data lives in the named `pgdata`
   # volume, so it survives `docker compose down` (but not `down -v`).
+  #
+  # Host port is 5433, not Postgres's usual 5432, since 5432 is very
+  # commonly already taken by a locally-installed Postgres on dev
+  # machines. This only affects connecting from your host (e.g. psql or
+  # a GUI client) — the backend always talks to this container over
+  # Docker's internal network at db:5432 regardless of the host mapping,
+  # so nothing else needs to change.
   db:
     image: postgres:16-alpine
     environment:
@@ -23,7 +30,7 @@ services:
       POSTGRES_PASSWORD: affa
       POSTGRES_DB: affa
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
