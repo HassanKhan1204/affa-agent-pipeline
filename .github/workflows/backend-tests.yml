@@ -1,0 +1,36 @@
+name: Backend Tests
+
+on:
+  push:
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-tests.yml"
+  pull_request:
+    paths:
+      - "backend/**"
+      - ".github/workflows/backend-tests.yml"
+  workflow_dispatch: {}  # lets you trigger it manually from the Actions tab
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run pytest
+        # The test suite uses an in-memory SQLite DB (see tests/conftest.py)
+        # so it doesn't need Postgres or a DATABASE_URL — it exercises the
+        # same FastAPI app that talks to Postgres in docker-compose.
+        run: pytest -v

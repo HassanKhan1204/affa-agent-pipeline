@@ -270,6 +270,63 @@ th {
   font-size: 0.85rem;
 }
 
+.status-select {
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-repeat: no-repeat;
+  background-position: right 0.45rem center;
+  background-size: 0.6em;
+  padding-right: 1.5rem;
+  border: 1px solid var(--line);
+  transition: opacity 0.15s ease;
+}
+
+.status-select:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.status-select:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 1px;
+}
+
+.status-select-new {
+  background-color: #EFEBDD;
+  color: #7A7461;
+  border-color: var(--line);
+}
+
+.status-select-drafted {
+  background-color: #E8B84B26;
+  color: #8A6414;
+  border-color: #E8B84B4d;
+}
+
+.status-select-contacted {
+  background-color: #5C7A5C26;
+  color: var(--sage-dark);
+  border-color: #5C7A5C4d;
+}
+
+.status-select-responded {
+  background-color: #3E594026;
+  color: var(--sage-dark);
+  border-color: var(--sage-dark);
+}
+
+.status-select-declined {
+  background-color: #C0392B1f;
+  color: #A5382A;
+  border-color: #C0392B4d;
+}
+
 .detail-row td {
   padding: 0;
   border-bottom: 1px solid var(--line);

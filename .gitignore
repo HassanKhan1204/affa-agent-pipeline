@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.pytest_cache/
 
 # Node / React
 node_modules/
@@ -20,6 +21,12 @@ dist/
 # from the JSON files every run, so there's nothing lost by ignoring it).
 affa_crm.db
 affa_campaign.html
+
+# Backend's local SQLite fallback (used only when DATABASE_URL isn't set,
+# e.g. running uvicorn directly without Docker/Postgres). The real data
+# lives in Postgres via docker-compose; this file is dev-only scratch.
+backend/affa_api.db
+_merge_tmp/
 
 # OS junk
 .DS_Store

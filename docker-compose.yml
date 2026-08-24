@@ -1,24 +1,63 @@
 services:
-  # One-shot pipeline runner. `docker compose run pipeline` executes
-  # run_pipeline.sh (funding -> partnership -> CRM -> outreach -> campaign
-  # -> export) end to end and writes results straight back onto the host,
-  # since the whole repo is bind-mounted. Override the command to run a
-  # single step instead, e.g.:
-  #   docker compose run pipeline python funding_agent.py
+  # One-shot pipeline runner — not started by plain `docker compose up`
+  # (see the `pipeline` profile below). Runs run_pipeline.sh (funding ->
+  # partnership -> CRM -> outreach -> campaign -> export) end to end and
+  # writes results straight back onto the host, since the whole repo is
+  # bind-mounted. Override the command to run a single step instead:
+  #   docker compose run --rm pipeline python funding_agent.py
   pipeline:
     build: .
+    profiles: ["pipeline"]
     env_file:
       - .env
     volumes:
       - .:/app
     working_dir: /app
 
-  # Serves the built React CRM table on http://localhost:8080. Rebuild
-  # after UI code changes (`docker compose up --build ui`); leads.json is
-  # bind-mounted so a fresh pipeline run shows up without a rebuild.
+  # Local Postgres for the CRM API. Data lives in the named `pgdata`
+  # volume, so it survives `docker compose down` (but not `down -v`).
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: affa
+      POSTGRES_PASSWORD: affa
+      POSTGRES_DB: affa
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U affa"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  # FastAPI CRM API on http://localhost:8000. Serves whatever's in
+  # Postgres — it doesn't run the pipeline itself. After a pipeline run,
+  # sync its output into Postgres with:
+  #   docker compose run --rm backend python load_data.py
+  backend:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg2://affa:affa@db:5432/affa
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./affa_crm.db:/app/affa_crm.db:ro
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # Serves the built React CRM table on http://localhost:8080, proxying
+  # /api/* to the backend (see affa-ui/nginx.conf) so the frontend never
+  # needs to know the backend's address. Rebuild after UI code changes:
+  #   docker compose up --build ui
   ui:
     build: ./affa-ui
     ports:
       - "8080:80"
-    volumes:
-      - ./leads.json:/usr/share/nginx/html/leads.json:ro
+    depends_on:
+      - backend
+
+volumes:
+  pgdata:

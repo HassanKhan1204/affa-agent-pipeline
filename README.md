@@ -18,7 +18,10 @@ Funding Agent  ─┐
 Partnership     ─┘   partners.json ─┼──► SQLite CRM ──► Outreach Agent ──► Campaign Agent
 Agent                               │    (affa_crm.db)  (drafts emails)   (landing page)
                                      │
-                                     └──► React CRM UI (searchable, filterable table)
+                                     └──► load_data.py (ETL) ──► Postgres ──► FastAPI ──► React CRM UI
+                                          (syncs leads, never          (CRM API)  (live table,
+                                           overwrites human-set                   status editing)
+                                           status)
 ```
 
 | Agent | What it does |
@@ -28,19 +31,24 @@ Agent                               │    (affa_crm.db)  (drafts emails)   (lan
 | **CRM builder** | Loads both lead lists into a single SQLite database |
 | **Outreach Agent** | Drafts a short, specific outreach message for every lead — no templates, each one references the actual fit |
 | **Campaign Agent** | Turns the CRM's real numbers into a one-page HTML campaign/landing page |
-| **React CRM UI** | A searchable, filterable table view of every lead with expandable outreach drafts |
+| **`load_data.py`** | Syncs SQLite's leads into Postgres (insert new leads, update everything except `status`, which is owned by the API/UI from that point on) |
+| **FastAPI backend** | Serves the CRM over a real API (`/api/leads`, `/api/stats`) backed by Postgres, with a `PATCH` endpoint for updating a lead's status |
+| **React CRM UI** | A searchable, filterable table view of every lead, with expandable outreach drafts and an inline status dropdown that writes back through the API |
 
 ## Stack
 
 - **Python** + **Anthropic API** (`claude-sonnet-4-6` with the `web_search` tool) for all agents
-- **SQLite** for the CRM
+- **SQLite** as the pipeline's working CRM (rebuilt fresh from `funders.json`/`partners.json` on every run)
+- **FastAPI** + **SQLAlchemy** + **Postgres** as the serving layer the UI actually talks to, with a **pytest** suite (in-memory SQLite, no live DB needed to run it)
 - **React + Vite** for the CRM table UI, built and served by **nginx** in Docker
 - Plain **HTML/CSS** for the static campaign page
-- **Docker + Docker Compose** for a one-command local setup (optional — see below)
+- **Docker + Docker Compose** to run the whole stack (pipeline, Postgres, API, UI) with one command
 
-Runs locally against a single SQLite file, which keeps the whole pipeline
-reliable to demo live. Docker is optional — everything also runs with a
-plain local Python + Node install (see below).
+The pipeline itself still runs against a single SQLite file end to end,
+which keeps it simple and reliable to demo. Its output is then synced into
+Postgres, which is what the live API and UI actually read from — so the
+CRM table stays up (and status edits stick) even while the pipeline is
+mid-run or between runs.
 
 ## Running it
 
@@ -59,15 +67,34 @@ cp .env.example .env
 #    campaign -> export), end to end, in one command
 docker compose run --rm pipeline
 
-# 3. Serve the CRM table UI at http://localhost:8080
+# 3. Start Postgres + the API, then sync the pipeline's SQLite output into it
+docker compose up -d db backend
+docker compose run --rm backend python load_data.py
+
+# 4. Serve the CRM table UI at http://localhost:8080
 docker compose up --build ui
 ```
 
-Re-run a single step instead of the whole pipeline with
+The API is now live at `http://localhost:8000` (`/api/leads`, `/api/stats`,
+interactive docs at `/docs`), and the UI at `http://localhost:8080` talks to
+it directly — including the status dropdown on each row, which writes
+straight back to Postgres.
+
+Re-run a single pipeline step instead of the whole thing with
 `docker compose run --rm pipeline python funding_agent.py` (swap in any
 script name). Nothing is lost between runs — the repo is bind-mounted into
 the container, so `affa_crm.db`, `leads.json`, and `docs/index.html` are
-written straight back onto your machine.
+written straight back onto your machine. After any pipeline re-run, repeat
+step 3's `load_data.py` sync to pick up new leads — it only ever adds or
+refreshes lead details, and never touches a status you've already set by
+hand in the UI.
+
+Run the backend's test suite (no Postgres needed — it uses an in-memory
+SQLite DB) with:
+
+```bash
+docker compose run --rm backend sh -c "pip install -r requirements-dev.txt && pytest"
+```
 
 ### Option B — run it natively
 
@@ -85,13 +112,21 @@ python build_crm.py            # -> affa_crm.db
 python outreach_agent.py       # fills in outreach_message for every lead
 python campaign_agent.py       # -> docs/index.html
 
-# 4. (Optional) Run the React CRM UI
-python export_leads.py                       # -> leads.json
-cp leads.json affa-ui/public/leads.json      # Windows: copy leads.json affa-ui\public\leads.json
+# 4. (Optional) Run the API + React CRM UI
+cd backend
+pip install -r requirements.txt
+python load_data.py --source ../affa_crm.db   # syncs affa_crm.db -> a local SQLite API DB
+uvicorn app.main:app --reload                 # API at http://localhost:8000
+
+# in a second terminal
 cd affa-ui
 npm install
-npm run dev                                  # open the printed localhost URL
+npm run dev                                   # open the printed localhost URL
 ```
+
+Without a `DATABASE_URL` set, the backend falls back to its own local
+SQLite file (`backend/affa_api.db`) instead of Postgres — handy for running
+natively without installing a database server.
 
 ## Automatic daily updates
 
@@ -123,6 +158,8 @@ re-publishing the page automatically.
   pipeline is 100% guaranteed accurate.
 - Outreach messages are drafts meant for human review before sending, not
   an auto-send system.
-- The React UI reads a static JSON export rather than a live database
-  connection, by design — simpler and more demo-reliable than running a
-  backend API server alongside the frontend.
+- The daily GitHub Actions workflow re-runs the pipeline and commits
+  `leads.json` as a static snapshot (used by the static campaign page), but
+  it doesn't push into Postgres — that sync (`load_data.py`) is a local/
+  Docker step by design, since the live API + UI are meant to run against
+  whichever database you point them at, not whatever last ran in CI.

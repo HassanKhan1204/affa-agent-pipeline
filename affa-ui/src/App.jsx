@@ -9,22 +9,43 @@ function telHref(phone) {
   return leading.replace(/[^\d+]/g, '')
 }
 
+const STATUS_OPTIONS = ['new', 'drafted', 'contacted', 'responded', 'declined']
+
 export default function App() {
   const [leads, setLeads] = useState(null)
   const [error, setError] = useState(null)
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState('all')
   const [expandedId, setExpandedId] = useState(null)
+  const [statusSaving, setStatusSaving] = useState(null)
 
   useEffect(() => {
-    fetch('/leads.json')
+    fetch('/api/leads')
       .then((res) => {
-        if (!res.ok) throw new Error('leads.json not found')
+        if (!res.ok) throw new Error(`API returned ${res.status}`)
         return res.json()
       })
       .then(setLeads)
       .catch((err) => setError(err.message))
   }, [])
+
+  async function updateStatus(leadId, status) {
+    setStatusSaving(leadId)
+    try {
+      const res = await fetch(`/api/leads/${leadId}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status }),
+      })
+      if (!res.ok) throw new Error(`API returned ${res.status}`)
+      const updated = await res.json()
+      setLeads((prev) => prev.map((l) => (l.id === leadId ? updated : l)))
+    } catch (err) {
+      window.alert(`Couldn't update status: ${err.message}`)
+    } finally {
+      setStatusSaving(null)
+    }
+  }
 
   const filtered = useMemo(() => {
     if (!leads) return []
@@ -52,12 +73,16 @@ export default function App() {
   if (error) {
     return (
       <div className="state-message">
-        <p><strong>Couldn't load leads.json</strong></p>
+        <p><strong>Couldn't reach the API</strong></p>
         <p>
-          Run <code>python export_leads.py</code> in your project folder,
-          then copy the resulting <code>leads.json</code> into{' '}
-          <code>affa-ui/public/leads.json</code> and refresh.
+          Make sure the backend is running —{' '}
+          <code>docker compose up backend</code> (and <code>db</code>), or{' '}
+          <code>uvicorn app.main:app --reload</code> from <code>backend/</code>.
+          Then load its data with{' '}
+          <code>docker compose run --rm backend python load_data.py</code>{' '}
+          and refresh.
         </p>
+        <p className="muted">({error})</p>
       </div>
     )
   }
@@ -116,6 +141,7 @@ export default function App() {
               <th>Type</th>
               <th>Focus Area</th>
               <th>Contact</th>
+              <th>Status</th>
               <th>Details</th>
             </tr>
           </thead>
@@ -190,6 +216,18 @@ export default function App() {
                         {!hasContact && <span className="muted">—</span>}
                       </span>
                     </td>
+                    <td onClick={(e) => e.stopPropagation()}>
+                      <select
+                        className={`status-select status-select-${lead.status}`}
+                        value={lead.status}
+                        disabled={statusSaving === lead.id}
+                        onChange={(e) => updateStatus(lead.id, e.target.value)}
+                      >
+                        {STATUS_OPTIONS.map((s) => (
+                          <option key={s} value={s}>{s}</option>
+                        ))}
+                      </select>
+                    </td>
                     <td>
                       {hasMessage || hasContact ? (
                         <span className="status-drafted">
@@ -202,7 +240,7 @@ export default function App() {
                   </tr>
                   {isOpen && (hasMessage || hasContact) && (
                     <tr className="detail-row" key={`${lead.id}-detail`}>
-                      <td colSpan={6}>
+                      <td colSpan={7}>
                         <div className="detail-box">
                           {hasContact && (
                             <>
