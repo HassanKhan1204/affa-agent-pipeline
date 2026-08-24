@@ -75,10 +75,13 @@ docker compose run --rm backend python load_data.py
 docker compose up --build ui
 ```
 
-The API is now live at `http://localhost:8000` (`/api/leads`, `/api/stats`,
+The API is now live at `http://localhost:8001` (`/api/leads`, `/api/stats`,
 interactive docs at `/docs`), and the UI at `http://localhost:8080` talks to
 it directly — including the status dropdown on each row, which writes
-straight back to Postgres.
+straight back to Postgres. (The API listens on port 8000 *inside* Docker's
+network — that's what the UI container actually talks to — it's just
+published on your machine as 8001, since 8000 is a common port for other
+local dev servers to already be using.)
 
 Re-run a single pipeline step instead of the whole thing with
 `docker compose run --rm pipeline python funding_agent.py` (swap in any

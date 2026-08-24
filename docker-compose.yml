@@ -39,16 +39,22 @@ services:
       timeout: 5s
       retries: 10
 
-  # FastAPI CRM API on http://localhost:8000. Serves whatever's in
+  # FastAPI CRM API on http://localhost:8001. Serves whatever's in
   # Postgres — it doesn't run the pipeline itself. After a pipeline run,
   # sync its output into Postgres with:
   #   docker compose run --rm backend python load_data.py
+  #
+  # Host port is 8001, not FastAPI's usual 8000, for the same reason as
+  # Postgres above: 8000 is a very common default for other local dev
+  # servers and is often already taken. The ui container's nginx always
+  # reaches this over the internal Docker network at backend:8000
+  # (see affa-ui/nginx.conf), so that's unaffected by this host mapping.
   backend:
     build: ./backend
     environment:
       DATABASE_URL: postgresql+psycopg2://affa:affa@db:5432/affa
     ports:
-      - "8000:8000"
+      - "8001:8000"
     volumes:
       - ./affa_crm.db:/app/affa_crm.db:ro
     depends_on:
