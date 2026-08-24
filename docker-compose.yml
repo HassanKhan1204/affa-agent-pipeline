@@ -1,0 +1,24 @@
+services:
+  # One-shot pipeline runner. `docker compose run pipeline` executes
+  # run_pipeline.sh (funding -> partnership -> CRM -> outreach -> campaign
+  # -> export) end to end and writes results straight back onto the host,
+  # since the whole repo is bind-mounted. Override the command to run a
+  # single step instead, e.g.:
+  #   docker compose run pipeline python funding_agent.py
+  pipeline:
+    build: .
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    working_dir: /app
+
+  # Serves the built React CRM table on http://localhost:8080. Rebuild
+  # after UI code changes (`docker compose up --build ui`); leads.json is
+  # bind-mounted so a fresh pipeline run shows up without a rebuild.
+  ui:
+    build: ./affa-ui
+    ports:
+      - "8080:80"
+    volumes:
+      - ./leads.json:/usr/share/nginx/html/leads.json:ro

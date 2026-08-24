@@ -34,28 +34,56 @@ Agent                               │    (affa_crm.db)  (drafts emails)   (lan
 
 - **Python** + **Anthropic API** (`claude-sonnet-4-6` with the `web_search` tool) for all agents
 - **SQLite** for the CRM
-- **React + Vite** for the CRM table UI
+- **React + Vite** for the CRM table UI, built and served by **nginx** in Docker
 - Plain **HTML/CSS** for the static campaign page
+- **Docker + Docker Compose** for a one-command local setup (optional — see below)
 
-No backend server, no Docker, no deployment — everything runs locally
-against a single SQLite file, which keeps the whole pipeline reliable to
-demo live.
+Runs locally against a single SQLite file, which keeps the whole pipeline
+reliable to demo live. Docker is optional — everything also runs with a
+plain local Python + Node install (see below).
 
 ## Running it
+
+The whole thing is containerized, so the fastest path from clone to running
+app doesn't require installing Python, Node, or any dependencies locally —
+just Docker.
+
+### Option A — Docker (recommended)
+
+```bash
+# 1. Add your key
+cp .env.example .env
+# edit .env and paste in your ANTHROPIC_API_KEY
+
+# 2. Run the full pipeline (funding -> partnership -> CRM -> outreach ->
+#    campaign -> export), end to end, in one command
+docker compose run --rm pipeline
+
+# 3. Serve the CRM table UI at http://localhost:8080
+docker compose up --build ui
+```
+
+Re-run a single step instead of the whole pipeline with
+`docker compose run --rm pipeline python funding_agent.py` (swap in any
+script name). Nothing is lost between runs — the repo is bind-mounted into
+the container, so `affa_crm.db`, `leads.json`, and `docs/index.html` are
+written straight back onto your machine.
+
+### Option B — run it natively
 
 ```bash
 # 1. Set your API key
 export ANTHROPIC_API_KEY=your_key_here      # Windows: $env:ANTHROPIC_API_KEY="your_key_here"
 
 # 2. Install the Python SDK
-pip install anthropic
+pip install -r requirements.txt
 
-# 3. Run the pipeline in order
+# 3. Run the pipeline in order (or just ./run_pipeline.sh to do all of this)
 python funding_agent.py        # -> funders.json
 python partnership_agent.py    # -> partners.json
 python build_crm.py            # -> affa_crm.db
 python outreach_agent.py       # fills in outreach_message for every lead
-python campaign_agent.py       # -> affa_campaign.html
+python campaign_agent.py       # -> docs/index.html
 
 # 4. (Optional) Run the React CRM UI
 python export_leads.py                       # -> leads.json

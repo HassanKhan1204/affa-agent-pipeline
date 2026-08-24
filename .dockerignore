@@ -1,0 +1,11 @@
+.git
+.github
+__pycache__
+*.pyc
+.venv
+venv
+.env
+.env.local
+affa-ui/node_modules
+affa-ui/dist
+*.md
