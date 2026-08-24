@@ -1,5 +1,9 @@
 # A Farm For All — AI Growth Pipeline
 
+**🔗 [Live demo](https://affa-crm-ui.onrender.com/)** — the funder/partner
+CRM, live. (Free-tier hosting: if it's been quiet, the first load can take
+up to a minute to wake back up.)
+
 A coordinated team of AI agents that researches funding, identifies partners,
 builds a working CRM, and drafts personalized outreach — for
 [A Farm For All](https://www.afarmforallnewyork.org/), a real 46-acre
