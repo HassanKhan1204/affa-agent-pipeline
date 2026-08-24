@@ -11,6 +11,14 @@ function telHref(phone) {
 
 const STATUS_OPTIONS = ['new', 'drafted', 'contacted', 'responded', 'declined']
 
+// Empty by default: local dev and the dockerized UI both talk to the API
+// same-origin via a proxy (vite.config.js / nginx.conf), so relative
+// /api/... paths just work. When the UI is deployed on its own (e.g. as a
+// Render static site), it has no server-side proxy available, so it's
+// built with VITE_API_BASE set to the backend's full URL instead — see
+// render.yaml. Vite only exposes env vars prefixed VITE_ to the browser.
+const API_BASE = import.meta.env.VITE_API_BASE || ''
+
 export default function App() {
   const [leads, setLeads] = useState(null)
   const [error, setError] = useState(null)
@@ -20,7 +28,7 @@ export default function App() {
   const [statusSaving, setStatusSaving] = useState(null)
 
   useEffect(() => {
-    fetch('/api/leads')
+    fetch(`${API_BASE}/api/leads`)
       .then((res) => {
         if (!res.ok) throw new Error(`API returned ${res.status}`)
         return res.json()
@@ -32,7 +40,7 @@ export default function App() {
   async function updateStatus(leadId, status) {
     setStatusSaving(leadId)
     try {
-      const res = await fetch(`/api/leads/${leadId}`, {
+      const res = await fetch(`${API_BASE}/api/leads/${leadId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status }),
@@ -75,12 +83,23 @@ export default function App() {
       <div className="state-message">
         <p><strong>Couldn't reach the API</strong></p>
         <p>
-          Make sure the backend is running —{' '}
-          <code>docker compose up backend</code> (and <code>db</code>), or{' '}
-          <code>uvicorn app.main:app --reload</code> from <code>backend/</code>.
-          Then load its data with{' '}
-          <code>docker compose run --rm backend python load_data.py</code>{' '}
-          and refresh.
+          {API_BASE ? (
+            <>
+              This page is built to talk to <code>{API_BASE}</code>. If that's
+              a Render free-tier service, it sleeps after inactivity — the
+              first request can take 30-60s to wake it up. Try refreshing in
+              a minute.
+            </>
+          ) : (
+            <>
+              Make sure the backend is running —{' '}
+              <code>docker compose up backend</code> (and <code>db</code>), or{' '}
+              <code>uvicorn app.main:app --reload</code> from <code>backend/</code>.
+              Then load its data with{' '}
+              <code>docker compose run --rm backend python load_data.py</code>{' '}
+              and refresh.
+            </>
+          )}
         </p>
         <p className="muted">({error})</p>
       </div>

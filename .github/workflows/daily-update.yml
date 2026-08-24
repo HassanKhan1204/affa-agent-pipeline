@@ -51,6 +51,20 @@ jobs:
       - name: Export leads for React UI
         run: python export_leads.py
 
+      - name: Install backend dependencies
+        run: pip install -r backend/requirements.txt
+
+      - name: Sync leads to the live database
+        # No-op until the PRODUCTION_DATABASE_URL secret is set (repo
+        # Settings -> Secrets and variables -> Actions) — see the
+        # "Deploying it live" section in README.md. Until then this env
+        # var is an empty string, which backend/app/config.py treats the
+        # same as unset and falls back to a throwaway local SQLite file,
+        # so the step succeeds without doing anything real.
+        env:
+          DATABASE_URL: ${{ secrets.PRODUCTION_DATABASE_URL }}
+        run: python backend/load_data.py
+
       - name: Commit and push updates
         run: |
           git config user.name "AFFA Pipeline Bot"

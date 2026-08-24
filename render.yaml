@@ -1,0 +1,44 @@
+# Render Blueprint — deploys the CRM API and UI together.
+#
+# Deploy: Render dashboard -> New -> Blueprint -> pick this repo. Render
+# reads this file and proposes both services below in one step.
+#
+# The database is NOT defined here on purpose — it's a Neon Postgres
+# instance instead of Render's own Postgres, because Neon's free tier
+# never expires (Render's free Postgres is deleted after 30 days). See
+# the "Deploying it live" section in README.md for the full walkthrough,
+# including where to get a Neon connection string.
+#
+# Both service names below are part of their public URL
+# (https://<name>.onrender.com), so CORS_ORIGINS and VITE_API_BASE can
+# reference each other by that predictable URL instead of needing a
+# manual round trip after the first deploy. If Render has to rename a
+# service (the name was already taken by someone else), update the other
+# service's env var to match the actual URL it was given.
+services:
+  # FastAPI CRM API. DATABASE_URL is marked sync:false so Render prompts
+  # for it during Blueprint setup instead of it living in this file —
+  # paste in the Neon connection string there.
+  - type: web
+    name: affa-crm-backend
+    runtime: docker
+    rootDir: backend
+    plan: free
+    healthCheckPath: /api/health
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://affa-crm-ui.onrender.com
+
+  # React CRM table, built as a static site (no server needed — it's a
+  # client-side fetch straight to the backend above, enabled by CORS).
+  - type: web
+    name: affa-crm-ui
+    runtime: static
+    buildCommand: cd affa-ui && npm install && npm run build
+    staticPublishPath: affa-ui/dist
+    plan: free
+    envVars:
+      - key: VITE_API_BASE
+        value: https://affa-crm-backend.onrender.com

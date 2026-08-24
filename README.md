@@ -151,7 +151,78 @@ publishes a refreshed campaign page via GitHub Pages — no laptop required.
    scheduled run.
 
 After that, it runs daily on its own, growing the lead list and
-re-publishing the page automatically.
+re-publishing the page automatically. Add the `PRODUCTION_DATABASE_URL`
+secret described below and this same workflow also keeps a live, deployed
+CRM in sync — no separate cron job needed.
+
+## Deploying it live
+
+Everything above runs against a database only your machine can see. To get
+a link anyone can open — coworkers, recruiters, teammates on their own
+devices — host the database on **Neon** (Postgres, free tier that never
+expires) and the API + UI on **Render** (free tier; the `render.yaml` in
+this repo deploys both services in one step). Total cost: $0, no credit
+card required for either service.
+
+**1. Create the database (Neon)**
+
+1. Go to [neon.com](https://neon.com) and sign up.
+2. Create a new project (any name/region is fine).
+3. On the project dashboard, copy the **connection string** — it looks like
+   `postgresql://<user>:<password>@<host>/<database>?sslmode=require`. Keep
+   this handy for the next two steps.
+
+**2. Deploy the API + UI (Render)**
+
+1. Go to [render.com](https://render.com) and sign up.
+2. Dashboard → **New** → **Blueprint** → connect your GitHub account →
+   select the `affa-agent-pipeline` repo.
+3. Render reads `render.yaml` and proposes two services: `affa-crm-backend`
+   (the API) and `affa-crm-ui` (the table). When it prompts for
+   `DATABASE_URL`, paste in the Neon connection string from step 1.
+4. Click **Deploy Blueprint**. Both services build — the UI runs
+   `npm run build`, the backend builds its Docker image — first deploy
+   takes a few minutes.
+5. The database starts out empty. From your own machine, load it once:
+   ```bash
+   cd backend
+   pip install -r requirements.txt
+   # macOS/Linux:
+   DATABASE_URL="<paste the Neon connection string>" python load_data.py --source ../affa_crm.db
+   # Windows PowerShell:
+   $env:DATABASE_URL="<paste the Neon connection string>"; python load_data.py --source ../affa_crm.db
+   ```
+   This creates the `leads` table and loads whatever's currently in your
+   local `affa_crm.db`.
+6. Visit `https://affa-crm-ui.onrender.com` — that's the shareable link.
+
+**3. Keep the live site in sync automatically**
+
+The daily pipeline workflow can push straight into this same database, so
+new leads show up on the live site with no manual steps:
+
+1. Repo **Settings** → **Secrets and variables** → **Actions** → **New
+   repository secret**.
+2. Name it `PRODUCTION_DATABASE_URL`, paste the same Neon connection string
+   as the value.
+
+From the next scheduled run onward — or trigger it now from the **Actions**
+tab — new funders and partners reach the live site automatically.
+
+**Worth knowing:**
+
+- Both Render's free web service and Neon's free database "sleep" after a
+  few minutes of inactivity. The first visit after a quiet stretch takes
+  30-60 seconds to wake back up; after that it's normal speed. That's
+  expected free-tier behavior, not a bug — the updated error message in the
+  UI explains this if someone hits it mid-wakeup.
+- The two service names in `render.yaml` (`affa-crm-backend`,
+  `affa-crm-ui`) double as their URLs. If Render had to rename either one
+  (only happens if that name was already taken), update `CORS_ORIGINS` on
+  the backend and `VITE_API_BASE` on the UI in the Render dashboard to
+  match the real URL, then trigger a manual redeploy of both.
+- A status change made through the live UI writes straight to Neon — same
+  API code path as the local Docker setup, just a different database.
 
 ## Notes / limitations
 
@@ -161,8 +232,7 @@ re-publishing the page automatically.
   pipeline is 100% guaranteed accurate.
 - Outreach messages are drafts meant for human review before sending, not
   an auto-send system.
-- The daily GitHub Actions workflow re-runs the pipeline and commits
-  `leads.json` as a static snapshot (used by the static campaign page), but
-  it doesn't push into Postgres — that sync (`load_data.py`) is a local/
-  Docker step by design, since the live API + UI are meant to run against
-  whichever database you point them at, not whatever last ran in CI.
+- The daily GitHub Actions workflow always commits `leads.json` as a static
+  snapshot (used by the static campaign page). It only pushes into a live
+  Postgres database if the `PRODUCTION_DATABASE_URL` secret is set — see
+  "Deploying it live" above; without it, that step is a harmless no-op.
