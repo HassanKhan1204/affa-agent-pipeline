@@ -33,12 +33,13 @@ services:
 
   # React CRM table, built as a static site (no server needed — it's a
   # client-side fetch straight to the backend above, enabled by CORS).
+  # Static sites don't take a `plan` field — Render's static hosting is
+  # free by default, with no separate instance tier to pick.
   - type: web
     name: affa-crm-ui
     runtime: static
     buildCommand: cd affa-ui && npm install && npm run build
     staticPublishPath: affa-ui/dist
-    plan: free
     envVars:
       - key: VITE_API_BASE
         value: https://affa-crm-backend.onrender.com
