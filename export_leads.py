@@ -18,6 +18,7 @@ conn.row_factory = sqlite3.Row
 
 rows = conn.execute(
     """SELECT id, category, name, subtype, focus_area, fit_reason, url,
+              contact_name, contact_email, contact_phone, contact_page,
               outreach_message, status
        FROM leads ORDER BY category, name"""
 ).fetchall()

@@ -37,11 +37,17 @@ preamble, no commentary) where each item has this exact shape:
   "type": "school | nonprofit | healthcare | restaurant | farmers_market | community_org",
   "focus_area": "string - what they do",
   "partnership_angle": "string - 1 sentence on what a partnership with A Farm For All could look like",
-  "url": "string - link if found, else empty string"
+  "url": "string - link if found, else empty string",
+  "contact_name": "string - a named partnerships/community-engagement contact person if publicly listed, else empty string",
+  "contact_email": "string - the most specific real email you can find (a named person's email beats a general info mailbox), else empty string",
+  "contact_phone": "string - a real phone number if publicly listed, else empty string",
+  "contact_page": "string - the specific contact/partner-with-us page for this org (not just the homepage), else empty string"
 }
 
 Only include real organizations you found through search. If you are not
 confident something is real and current, leave it out rather than guessing.
+Do not invent contact details — leave a contact_* field as an empty string
+if you can't verify it through search.
 Strongly prefer organizations located in or serving Dutchess County NY,
 the wider Hudson Valley, western Connecticut, or New York City boroughs
 (especially the Bronx and other under-served urban neighborhoods) over
@@ -82,6 +88,9 @@ on community health or nutrition, restaurants interested in local sourcing,
 farmers markets, and youth-serving community organizations. It's fine to
 return fewer than {count} if you can't find enough genuinely new, real,
 current organizations — never repeat or invent to hit the count.
+For each one, also search for a real, publicly listed contact route
+(named partnerships/community contact with email/phone if possible,
+otherwise a general email/phone/contact page) so we know who to reach out to.
 
 Return ONLY the JSON array as specified.
 """

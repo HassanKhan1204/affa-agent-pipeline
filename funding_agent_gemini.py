@@ -40,12 +40,17 @@ preamble, no commentary) where each item has this exact shape:
   "type": "grant | foundation | corporate | government",
   "focus_area": "string - what they fund",
   "fit_reason": "string - 1 sentence on why this fits A Farm For All specifically",
-  "url": "string - link if found, else empty string"
+  "url": "string - link if found, else empty string",
+  "contact_name": "string - a named grants/program contact person if publicly listed, else empty string",
+  "contact_email": "string - the most specific real email you can find (a named person's email beats a general grants/info mailbox), else empty string",
+  "contact_phone": "string - a real phone number if publicly listed, else empty string",
+  "contact_page": "string - the specific contact/inquiries/apply page for this program (not just the homepage), else empty string"
 }
 
 Only include real organizations/programs you found through search. If you
 are not confident something is real and current, leave it out rather than
-guessing.
+guessing. Do not invent contact details — leave a contact_* field as an
+empty string if you can't verify it through search.
 """
 
 
@@ -58,6 +63,9 @@ Research and return {count} real funding opportunities (grants, foundations,
 corporate sponsors, or government programs) that would plausibly fund this
 organization. Focus on: food access, urban agriculture, youth education,
 community wellness, and small nonprofit / community organization grants.
+For each one, also search for a real, publicly listed contact route (named
+grants officer with email/phone if possible, otherwise a general grants
+email/phone/contact page) so we know who to reach out to.
 
 Return ONLY the JSON array as specified.
 """

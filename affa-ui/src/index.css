@@ -164,7 +164,7 @@ th {
 
 .name-cell {
   font-weight: 600;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.4rem;
 }
@@ -193,6 +193,71 @@ th {
 
 .tag-funder { background: #E8B84B33; color: #8A6414; }
 .tag-partner { background: #5C7A5C33; color: var(--sage-dark); }
+
+.contact-cell {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: flex-start;
+}
+
+.contact-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: #5C7A5C1a;
+  color: var(--sage-dark);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid #5C7A5C33;
+  white-space: nowrap;
+  transition: background 0.15s ease;
+}
+
+.contact-pill:hover { background: #5C7A5C33; }
+
+.contact-pill-muted {
+  background: #E8B84B1a;
+  color: #8A6414;
+  border-color: #E8B84B4d;
+}
+
+.contact-pill-muted:hover { background: #E8B84B33; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  row-gap: 0.35rem;
+  column-gap: 1rem;
+  margin: 0 0 1.1rem;
+}
+
+.contact-row {
+  display: contents;
+}
+
+.contact-row dt {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #7A7461;
+}
+
+.contact-row dd {
+  margin: 0;
+  font-size: 0.88rem;
+  color: var(--soil);
+  word-break: break-word;
+}
+
+.contact-row a {
+  color: var(--sage-dark);
+  text-decoration: none;
+}
+
+.contact-row a:hover { text-decoration: underline; }
 
 .status-drafted {
   color: var(--sage-dark);

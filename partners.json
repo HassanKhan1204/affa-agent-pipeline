@@ -4,104 +4,164 @@
     "type": "nonprofit",
     "focus_area": "Connecting schools to local farms and food producers through procurement, school gardens, and food and nutrition education",
     "partnership_angle": "A Farm For All could become a regional NFSN partner organization, supplying local produce and agricultural education programming directly to schools in their network.",
-    "url": "https://www.farmtoschool.org"
+    "url": "https://www.farmtoschool.org",
+    "contact_name": "Scott Bunn, Development Director",
+    "contact_email": "scott@farmtoschool.org",
+    "contact_phone": "828-551-1264",
+    "contact_page": "https://www.farmtoschool.org/contact"
   },
   {
     "name": "Feeding America",
     "type": "nonprofit",
     "focus_area": "National hunger-relief network of 200+ food banks rescuing and distributing fresh produce to families facing food insecurity",
     "partnership_angle": "A Farm For All could donate or wholesale surplus produce to a local Feeding America member food bank, ensuring fresh microgreens and herbs reach food-insecure families.",
-    "url": "https://www.feedingamerica.org"
+    "url": "https://www.feedingamerica.org",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "800-771-2303",
+    "contact_page": "https://www.feedingamerica.org/ways-to-give/corporate-and-foundations/partnership-inquiry"
   },
   {
     "name": "FoodCorps",
     "type": "nonprofit",
     "focus_area": "National nonprofit placing food educators in schools to deliver nutrition education, school garden programming, and nourishing school meals",
     "partnership_angle": "A Farm For All could serve as a community farm service site for FoodCorps members, hosting youth in hands-on agricultural and nutrition education programming.",
-    "url": "https://www.foodcorps.org"
+    "url": "https://www.foodcorps.org",
+    "contact_name": "",
+    "contact_email": "info@foodcorps.org",
+    "contact_phone": "212-596-7045",
+    "contact_page": "https://foodcorps.org/become-a-corporate-partner/"
   },
   {
     "name": "Wholesome Wave",
     "type": "nonprofit",
     "focus_area": "Increasing affordable access to fresh fruits and vegetables for low-income families through SNAP doubling and produce prescription programs",
     "partnership_angle": "A Farm For All could become a partner farm site where SNAP benefits are doubled through Wholesome Wave's Fresh For Less-style program, expanding access to farm produce.",
-    "url": "https://www.wholesomewave.org"
+    "url": "https://www.wholesomewave.org",
+    "contact_name": "",
+    "contact_email": "info@wholesomewave.org",
+    "contact_phone": "",
+    "contact_page": "https://www.wholesomewave.org/partners"
   },
   {
     "name": "KidsGardening",
     "type": "nonprofit",
     "focus_area": "National nonprofit supporting school and youth garden programs through grants, resources, and educator tools since 1982",
     "partnership_angle": "A Farm For All could partner with KidsGardening to co-apply for Youth Garden Grants and collaborate on curriculum resources for youth agricultural education programming.",
-    "url": "https://kidsgardening.org"
+    "url": "https://kidsgardening.org",
+    "contact_name": "Em Shipman",
+    "contact_email": "emilys@kidsgardening.org",
+    "contact_phone": "802-242-2748",
+    "contact_page": "https://kidsgardening.org/work-with-us/"
   },
   {
     "name": "The Food Project",
     "type": "nonprofit",
     "focus_area": "Youth development and sustainable agriculture nonprofit in eastern Massachusetts growing food on 70 acres and donating to local hunger-relief organizations",
     "partnership_angle": "A Farm For All could collaborate with The Food Project to cross-train youth, share best practices in teen farm employment, and co-distribute produce to underserved communities.",
-    "url": "https://thefoodproject.org"
+    "url": "https://thefoodproject.org",
+    "contact_name": "Caiana Luse Moise, Greater Boston Associate Director of Youth Programs and Community Partnerships",
+    "contact_email": "clusemoise@thefoodproject.org",
+    "contact_phone": "",
+    "contact_page": "https://thefoodproject.org/contact-us/"
   },
   {
     "name": "Urban Growers Collective",
     "type": "nonprofit",
     "focus_area": "Black- and women-led Chicago urban farm network running youth corps programs, mobile markets, and community herbalism apprenticeships to advance food equity",
     "partnership_angle": "A Farm For All could share programming models and partner on microgreens and herb growing training for youth and beginner BIPOC farmers.",
-    "url": "https://www.urbangrowerscollective.org"
+    "url": "https://www.urbangrowerscollective.org",
+    "contact_name": "",
+    "contact_email": "info@urbangrowerscollective.org",
+    "contact_phone": "(773) 376-8882",
+    "contact_page": "https://www.urbangrowerscollective.org/contact"
   },
   {
     "name": "Edible Schoolyard Project",
     "type": "school",
     "focus_area": "Nonprofit dedicated to transforming public education through organic school gardens and kitchen classrooms that teach nutrition, science, and community values",
     "partnership_angle": "A Farm For All could supply fresh microgreens and herbs to Edible Schoolyard partner schools and co-develop edible education curriculum grounded in farm-based learning.",
-    "url": "https://edibleschoolyard.org"
+    "url": "https://edibleschoolyard.org",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "510.843.3811",
+    "contact_page": "https://edibleschoolyard.org/content/contact-us"
   },
   {
     "name": "Boys & Girls Clubs of America",
     "type": "community_org",
     "focus_area": "Youth-serving organization operating Healthy Habits programs emphasizing good nutrition, physical activity, and overall well-being for children and teens",
     "partnership_angle": "A Farm For All could host field trips and after-school garden programs at local Boys & Girls Club chapters, combining hands-on farming with nutrition education for youth.",
-    "url": "https://www.bgca.org"
+    "url": "https://www.bgca.org",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "(404) 487-5700",
+    "contact_page": "https://www.bgca.org/get-involved/become-a-partner/"
   },
   {
     "name": "YMCA of the USA",
     "type": "community_org",
     "focus_area": "Community wellness organization operating urban farms, gardens, mobile food markets, nutrition counseling, and healthy living programs for all ages",
     "partnership_angle": "A Farm For All could supply fresh produce and microgreens to YMCA mobile food markets and co-host community wellness events integrating gardening and nutrition education.",
-    "url": "https://www.ymca.org"
+    "url": "https://www.ymca.org",
+    "contact_name": "",
+    "contact_email": "partnerships@ymca.net",
+    "contact_phone": "",
+    "contact_page": "https://www.ymca.org/get-involved/partner"
   },
   {
     "name": "Farmers Market Coalition",
     "type": "farmers_market",
     "focus_area": "National nonprofit advocating for and supporting farmers markets, including SNAP/EBT acceptance, vendor education, and community food access",
     "partnership_angle": "A Farm For All could become a vendor at SNAP-accepting markets in FMC's network and use FMC resources to set up their own farm stand accepting federal nutrition benefits.",
-    "url": "https://farmersmarketcoalition.org"
+    "url": "https://farmersmarketcoalition.org",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://farmersmarketcoalition.org/joinus/contact-us/"
   },
   {
     "name": "Cooperative Extension System / 4-H",
     "type": "community_org",
     "focus_area": "USDA-linked network of land-grant university educators delivering agriculture, nutrition, youth development, and community programs in every U.S. county",
     "partnership_angle": "A Farm For All could partner with their local county Extension office to co-host 4-H youth agriculture programming and leverage research-based farming and nutrition resources.",
-    "url": "https://nifa.usda.gov/cooperative-extension"
+    "url": "https://nifa.usda.gov/cooperative-extension",
+    "contact_name": "4-H Headquarters (USDA NIFA)",
+    "contact_email": "4-H@usda.gov",
+    "contact_phone": "",
+    "contact_page": "https://www.nifa.usda.gov/4-h"
   },
   {
     "name": "Federally Qualified Health Centers (FQHC) Network",
     "type": "healthcare",
     "focus_area": "Community health centers providing comprehensive primary care to underserved populations, increasingly integrating food-as-medicine and produce prescription programs",
     "partnership_angle": "A Farm For All could supply fresh produce and microgreens to a local FQHC's produce prescription or CSA box program for patients managing diet-related chronic conditions.",
-    "url": "https://findahealthcenter.hrsa.gov"
+    "url": "https://findahealthcenter.hrsa.gov",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "877-464-4772",
+    "contact_page": "https://hrsa.my.site.com/support/s/"
   },
   {
     "name": "The Food Trust",
     "type": "nonprofit",
     "focus_area": "Philadelphia-based nonprofit delivering nutrition education and farm-to-school programming to 15,000+ students across Pennsylvania and New Jersey",
     "partnership_angle": "A Farm For All could partner with The Food Trust to supply locally grown microgreens and herbs to school cafeterias and co-deliver nutrition education in classrooms.",
-    "url": "https://thefoodtrust.org"
+    "url": "https://thefoodtrust.org",
+    "contact_name": "",
+    "contact_email": "contact@thefoodtrust.org",
+    "contact_phone": "215-575-0444",
+    "contact_page": "https://thefoodtrust.org/"
   },
   {
     "name": "Wholesome Wave Georgia",
     "type": "nonprofit",
     "focus_area": "Georgia nonprofit matching SNAP/EBT dollars dollar-for-dollar at partner farmers markets and retailers for locally grown fruits and vegetables, plus produce prescriptions",
     "partnership_angle": "A Farm For All could enroll as a Fresh For Less partner farm site, allowing SNAP shoppers to double their benefits when purchasing the farm's microgreens, herbs, and produce.",
-    "url": "https://wholesomewavegeorgia.org"
+    "url": "https://wholesomewavegeorgia.org",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://wholesomewavegeorgia.org/partner-application/"
   }
 ]

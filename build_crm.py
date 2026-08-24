@@ -31,6 +31,10 @@ def init_db(conn: sqlite3.Connection) -> None:
             focus_area TEXT,
             fit_reason TEXT,              -- unified: fit_reason or partnership_angle
             url TEXT,
+            contact_name TEXT,            -- named contact person, if known
+            contact_email TEXT,           -- best available email
+            contact_phone TEXT,           -- best available phone number
+            contact_page TEXT,            -- specific contact/inquiries page
             outreach_message TEXT,        -- filled in later by outreach_agent.py
             status TEXT DEFAULT 'new'     -- new -> contacted -> responded -> etc
         )
@@ -56,12 +60,17 @@ def insert_funders(conn: sqlite3.Connection, funders: list[dict]) -> int:
             f.get("focus_area", ""),
             f.get("fit_reason", ""),
             f.get("url", ""),
+            f.get("contact_name", ""),
+            f.get("contact_email", ""),
+            f.get("contact_phone", ""),
+            f.get("contact_page", ""),
         )
         for f in funders
     ]
     conn.executemany(
-        """INSERT INTO leads (category, name, subtype, focus_area, fit_reason, url)
-           VALUES (?, ?, ?, ?, ?, ?)""",
+        """INSERT INTO leads (category, name, subtype, focus_area, fit_reason, url,
+                               contact_name, contact_email, contact_phone, contact_page)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
         rows,
     )
     conn.commit()
@@ -77,12 +86,17 @@ def insert_partners(conn: sqlite3.Connection, partners: list[dict]) -> int:
             p.get("focus_area", ""),
             p.get("partnership_angle", ""),
             p.get("url", ""),
+            p.get("contact_name", ""),
+            p.get("contact_email", ""),
+            p.get("contact_phone", ""),
+            p.get("contact_page", ""),
         )
         for p in partners
     ]
     conn.executemany(
-        """INSERT INTO leads (category, name, subtype, focus_area, fit_reason, url)
-           VALUES (?, ?, ?, ?, ?, ?)""",
+        """INSERT INTO leads (category, name, subtype, focus_area, fit_reason, url,
+                               contact_name, contact_email, contact_phone, contact_page)
+           VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
         rows,
     )
     conn.commit()
