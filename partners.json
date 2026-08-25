@@ -284,5 +284,60 @@
     "contact_email": "info@bronxeats.org",
     "contact_phone": "",
     "contact_page": "https://www.bronxeats.org/faqs"
+  },
+  {
+    "name": "United Way of Dutchess-Orange Region",
+    "type": "nonprofit",
+    "focus_area": "Food access, food insecurity programming, and community health across Northeast Dutchess County and Orange County, including a food pantry that partners with farms for culturally appropriate fresh food distribution and co-leading the Dutchess County Food Council",
+    "partnership_angle": "A Farm For All could supply fresh microgreens, herbs, and produce to UWDOR's Northeast Dutchess Food Access Program and collaborate through the Dutchess County Food Council to strengthen the regional food-equity ecosystem.",
+    "url": "https://www.uwdor.org",
+    "contact_name": "Barbara Nectow",
+    "contact_email": "bnectow@uwdor.org",
+    "contact_phone": "(845) 471-1900 ext. 3106",
+    "contact_page": "https://www.uwdor.org/foodaccess"
+  },
+  {
+    "name": "Hudson Valley Farm to School (HVFS)",
+    "type": "nonprofit",
+    "focus_area": "Promoting student wellness by connecting Hudson Valley schools with local farm produce and offering classroom-based cooking and nutrition education through chef-led lessons, farm visits, and monthly cafeteria taste tests",
+    "partnership_angle": "A Farm For All could supply microgreens and herbs to HVFS partner school cafeterias and co-host farm field trips, deepening the farm-to-school supply chain and educational programming in the Putnam\u2013Dutchess corridor.",
+    "url": "https://www.hvfs.org",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://www.idealist.org/en/nonprofit/7db4a8409e0d4003a908b0873ba7996f-hudson-valley-farm-to-school-cold-spring"
+  },
+  {
+    "name": "FarmOn! Foundation",
+    "type": "nonprofit",
+    "focus_area": "Youth agricultural education nonprofit based at Empire Farm in Copake, NY (Columbia County), running free Camp FarmOn! summer programs, Milk Money local dairy outreach to schools, and entrepreneurship-in-agriculture programming for Hudson Valley youth",
+    "partnership_angle": "A Farm For All could co-host or refer youth participants to Camp FarmOn! while collaborating on shared farm-education programming that bridges Dutchess and Columbia County youth audiences.",
+    "url": "https://farmon.org",
+    "contact_name": "Tessa Williams (Founder & Executive Director)",
+    "contact_email": "info@farmonfoundation.org",
+    "contact_phone": "(518) 329-3276",
+    "contact_page": "https://farmon.org/empire-farm/"
+  },
+  {
+    "name": "Hawthorne Valley Association",
+    "type": "nonprofit",
+    "focus_area": "900-acre biodynamic farm, K\u201312 Waldorf school, place-based farm learning center, farm camps for youth, Farmscape Ecology Program, and CSA in Ghent (Columbia County, Hudson Valley), with a strong track record of partnering with nonprofits to provide full scholarships for low-income children to attend on-farm education programs",
+    "partnership_angle": "A Farm For All could exchange visiting cohorts of youth between the two farms, share educational curriculum on microgreens and herb growing, and collaborate on equity-focused on-farm programming for underserved families traveling from NYC and the Hudson Valley.",
+    "url": "https://hawthornevalley.org",
+    "contact_name": "Sushannah Laurange (Communications Manager)",
+    "contact_email": "",
+    "contact_phone": "(518) 672-4465 ext. 224",
+    "contact_page": "https://hawthornevalley.org/contact/"
+  },
+  {
+    "name": "Bronx Community Health Network (BCHN)",
+    "type": "healthcare",
+    "focus_area": "Nonprofit federally qualified health center (FQHC) serving the Bronx with primary care, dental, behavioral health, school-based health centers, and community health workers addressing food security, housing, and social determinants of health",
+    "partnership_angle": "A Farm For All could partner with BCHN's community health workers to provide produce prescription programs, farm visits, and nutrition education for Bronx patients, directly linking BCHN's food-insecure patient population to fresh microgreens and herbs from the farm.",
+    "url": "https://www.bchnhealth.org",
+    "contact_name": "",
+    "contact_email": "info@bchnhealth.org",
+    "contact_phone": "(929) 220-8181",
+    "contact_page": "https://www.bchnhealth.org/services_cat/community-services/"
   }
 ]

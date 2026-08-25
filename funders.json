@@ -273,5 +273,60 @@
     "contact_email": "",
     "contact_phone": "",
     "contact_page": "https://corporate.lowes.com/our-responsibilities/community-impact/faqs"
+  },
+  {
+    "name": "FruitGuys Community Fund Grant Program",
+    "type": "foundation",
+    "focus_area": "Sustainable agriculture, equitable food systems, small farms and agricultural nonprofits (250 acres or less)",
+    "fit_reason": "A Farm For All's 46-acre nonprofit community farm focused on food access and sustainable production fits squarely within the Fund's mission of supporting small farms and agricultural nonprofits with sustainability projects.",
+    "url": "https://fruitguyscommunityfund.org/apply/",
+    "contact_name": "",
+    "contact_email": "info@fruitguyscommunityfund.org",
+    "contact_phone": "",
+    "contact_page": "https://fruitguyscommunityfund.org/apply/"
+  },
+  {
+    "name": "Whole Foods Market Foundation \u2013 Community First Grant",
+    "type": "corporate",
+    "focus_area": "Fresh, healthy food access, nutrition education, community gardens, urban farms, mobile markets (requires Whole Foods Market Team Member nomination)",
+    "fit_reason": "A Farm For All's community farm and food access work for underserved communities aligns with the program's funding of community gardens and nutrition education nonprofits \u2014 the farm needs only a local Whole Foods Market team member to nominate them.",
+    "url": "https://www.wholefoodsmarketfoundation.org/our-work/food-access/comm-first-grant",
+    "contact_name": "Michelle Phares",
+    "contact_email": "grants@wholecitiesfoundation.org",
+    "contact_phone": "",
+    "contact_page": "https://www.wholefoodsmarketfoundation.org/community-first-grant-partner-application"
+  },
+  {
+    "name": "The New York Community Trust \u2013 Competitive Grants Program",
+    "type": "foundation",
+    "focus_area": "Food access, healthy communities, youth development, environment, and social services for New York City, Long Island, and Westchester-area nonprofits",
+    "fit_reason": "The Trust actively funds food access through hydroponic farming, community health, and youth programs in the greater NYC and Hudson Valley region \u2014 all direct matches to A Farm For All's mission.",
+    "url": "https://thenytrust.org/nonprofits/",
+    "contact_name": "Sheila R. Dinkins",
+    "contact_email": "sdinkins@thenytrust.org",
+    "contact_phone": "(212) 686-0010",
+    "contact_page": "https://thenytrust.org/nonprofits/what-we-fund-apply-for-grant/"
+  },
+  {
+    "name": "USDA GusNIP \u2013 Gus Schumacher Nutrition Incentive Program (Produce Prescription / Nutrition Incentive)",
+    "type": "government",
+    "focus_area": "Increasing fruit and vegetable purchase and consumption by SNAP-eligible low-income consumers; nutrition incentive projects at farms, farmers markets, and community food sites",
+    "fit_reason": "A Farm For All's farm and microgreens/herb production serving underserved NYC and Hudson Valley communities could anchor a GusNIP nutrition incentive or produce prescription project targeting SNAP participants.",
+    "url": "https://www.nifa.usda.gov/grants/programs/gus-schumacher-nutrition-incentive-program-gusnip",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://www.nifa.usda.gov/grants/programs/gus-schumacher-nutrition-incentive-program-gusnip/ppr"
+  },
+  {
+    "name": "Patrick Leahy Farm to School Grant Program (USDA FNS)",
+    "type": "government",
+    "focus_area": "Connecting students to local food sources through school gardens, agricultural education, local food sourcing for child nutrition programs, taste tests, and field trips",
+    "fit_reason": "A Farm For All's youth programming and agricultural education, combined with its local farm production, positions it perfectly to partner with a nearby school or child nutrition program operator to pursue a Farm to School implementation grant.",
+    "url": "https://www.fns.usda.gov/f2s/grant",
+    "contact_name": "",
+    "contact_email": "SM.FM.FarmtoSchool@usda.gov",
+    "contact_phone": "",
+    "contact_page": "https://www.fns.usda.gov/f2s/grant/applicant/rfa-snapshot"
   }
 ]
