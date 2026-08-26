@@ -328,5 +328,60 @@
     "contact_email": "SM.FM.FarmtoSchool@usda.gov",
     "contact_phone": "",
     "contact_page": "https://www.fns.usda.gov/f2s/grant/applicant/rfa-snapshot"
+  },
+  {
+    "name": "USDA Farmers Market Promotion Program (FMPP)",
+    "type": "government",
+    "focus_area": "Direct producer-to-consumer markets, farmers markets, CSA programs, and local/regional food access and marketing",
+    "fit_reason": "A Farm For All's 46-acre community farm producing microgreens, herbs, and produce for underserved communities aligns directly with FMPP's mission to expand direct producer-to-consumer food access; the farm could apply to develop or expand CSA or market programming for low-income NYC/Hudson Valley neighbors.",
+    "url": "https://www.ams.usda.gov/services/grants/fmpp",
+    "contact_name": "",
+    "contact_email": "FMLFPPgrants@usda.gov",
+    "contact_phone": "1-800-518-4726",
+    "contact_page": "https://www.ams.usda.gov/services/grants/fmpp/how-do-i-apply-fmpp-grant"
+  },
+  {
+    "name": "Lilah Hilliard Fisher Foundation Grant",
+    "type": "foundation",
+    "focus_area": "Regenerative agriculture, soil health, biodiversity, nutrient-dense foods, and nutrition education in the northeastern United States",
+    "fit_reason": "A Farm For All's work in regenerative community farming, microgreens, herbs, and nutrition education for underserved communities in the northeast fits squarely within the foundation's core grantmaking priorities, with past awards ranging from $10,000\u2013$90,000.",
+    "url": "https://lilahhilliardfisherfoundation.org/",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://lilahhilliardfisherfoundation.org/pages/lilah-hilliard-fisher-contact"
+  },
+  {
+    "name": "Franklin P. and Arthur W. Perdue Foundation \u2013 Corporate Giving Program",
+    "type": "corporate",
+    "focus_area": "Agriculture, education, fighting hunger and poverty, health and social services, and public safety in communities near Perdue operations, including New York",
+    "fit_reason": "A Farm For All's community farm serving underserved families with healthy food and agricultural education in New York State fits Perdue Foundation's focus on agriculture, hunger relief, and community wellness, especially with a Perdue associate endorsement.",
+    "url": "https://corporate.perduefarms.com/company/foundation",
+    "contact_name": "Kim Nechay",
+    "contact_email": "",
+    "contact_phone": "800-839-1754",
+    "contact_page": "https://corporate.perduefarms.com/responsibility/people/community/"
+  },
+  {
+    "name": "Howard E. Stark Charitable Foundation \u2013 Other Local Needs Grants",
+    "type": "foundation",
+    "focus_area": "Small, under-resourced Northeast nonprofits providing food aid, human services, and community support to people or animals in need",
+    "fit_reason": "A Farm For All is a small, passionate community farm in New York serving under-resourced communities with food access and agriculture education \u2014 exactly the profile of organizations the Stark Foundation prioritizes, with grants typically in the $5,000\u2013$25,000 range.",
+    "url": "https://www.howardstarkfoundation.org/",
+    "contact_name": "Jennifer A. Franz",
+    "contact_email": "starkfoundationgrants@gmail.com",
+    "contact_phone": "(516) 596-8929",
+    "contact_page": "https://www.howardstarkfoundation.org/apply/"
+  },
+  {
+    "name": "The Marcus Foundation \u2013 Hunger & Sustainability Grants",
+    "type": "foundation",
+    "focus_area": "Hunger alleviation, innovative community food resources, and sustainable food systems in the United States including New York",
+    "fit_reason": "A Farm For All's mission to grow and distribute healthy food for food-insecure urban and suburban communities aligns with the Marcus Foundation's focus on immediate hunger relief and systemic, sustainable food solutions; written partnership inquiries are currently welcome.",
+    "url": "https://www.marcusfound.org/",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://www.marcusfound.org/about"
   }
 ]

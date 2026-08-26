@@ -339,5 +339,60 @@
     "contact_email": "info@bchnhealth.org",
     "contact_phone": "(929) 220-8181",
     "contact_page": "https://www.bchnhealth.org/services_cat/community-services/"
+  },
+  {
+    "name": "Fareground Community Kitchen",
+    "type": "nonprofit",
+    "focus_area": "Food justice and anti-hunger nonprofit operating free marketplaces, tiny food pantries, community fridges, and a weekly community dinner across Beacon, Newburgh, Wappingers, Fishkill, and Poughkeepsie in southern Dutchess County",
+    "partnership_angle": "A Farm For All could supply fresh produce directly to Fareground's free marketplaces and tiny food pantries, putting hyperlocal Webatuck-grown food in the hands of food-insecure families across southern Dutchess County.",
+    "url": "https://www.fareground.org",
+    "contact_name": "Jamie Levato",
+    "contact_email": "jamie@fareground.org",
+    "contact_phone": "(845) 375-7194",
+    "contact_page": "https://www.fareground.org/our-programs"
+  },
+  {
+    "name": "Soul Fire Farm",
+    "type": "nonprofit",
+    "focus_area": "BIPOC-centered Afro-Indigenous community farm and training center in Grafton, Rensselaer County NY focused on ending racism in the food system, training BIPOC farmers, and distributing food to communities facing food apartheid",
+    "partnership_angle": "A Farm For All and Soul Fire Farm could co-host farmer training days, share curriculum on equitable land access, and cross-refer urban communities to each other's CSA and food-distribution programs.",
+    "url": "https://www.soulfirefarm.org",
+    "contact_name": "",
+    "contact_email": "love@soulfirefarm.org",
+    "contact_phone": "(518) 880-2034",
+    "contact_page": "https://www.soulfirefarm.org/contact/"
+  },
+  {
+    "name": "Webutuck Central School District",
+    "type": "school",
+    "focus_area": "Public PreK\u201312 school district serving Amenia, Northeast, Ancram, Washington, Dover, Stanford, and Millerton in Dutchess County \u2014 the district immediately surrounding A Farm For All's location in Webatuck",
+    "partnership_angle": "A Farm For All could partner with Webutuck schools on farm field trips, garden-to-cafeteria produce programs, and youth agricultural education days serving the district's 693 students, many of whom qualify for free or reduced lunch.",
+    "url": "https://www.webutuckschools.org",
+    "contact_name": "Lauren Marquis",
+    "contact_email": "lauren.marquis@webutuck.org",
+    "contact_phone": "(845) 373-4100",
+    "contact_page": "https://www.webutuckschools.org/district"
+  },
+  {
+    "name": "GrowNYC",
+    "type": "nonprofit",
+    "focus_area": "NYC-based environmental nonprofit operating a network of nearly 200 Greenmarket farmers markets, Farmstands in underserved neighborhoods, community gardens, and food-access programs across all five boroughs including the Bronx",
+    "partnership_angle": "A Farm For All could become a vendor or produce supplier to GrowNYC's Bronx Farmstands and Greenmarkets, getting its microgreens and herbs in front of urban neighbors while connecting to GrowNYC's wholesale Food Hub in Hunts Point.",
+    "url": "https://www.grownyc.org",
+    "contact_name": "",
+    "contact_email": "farmstand@grownyc.org",
+    "contact_phone": "(212) 788-7900",
+    "contact_page": "https://grownyc.org/greenmarketco/foodbox"
+  },
+  {
+    "name": "The POINT Community Development Corporation",
+    "type": "community_org",
+    "focus_area": "Youth development, arts and culture, and community/environmental revitalization in the Hunts Point neighborhood of the South Bronx, including food access, after-school programs, and ecological justice initiatives",
+    "partnership_angle": "A Farm For All could partner with The POINT CDC to bring Hunts Point youth to the farm for agricultural education days and to supply fresh produce to their community food programs in one of the Bronx's most food-insecure neighborhoods.",
+    "url": "https://www.thepoint.org",
+    "contact_name": "",
+    "contact_email": "info@thepoint.org",
+    "contact_phone": "(718) 542-4139",
+    "contact_page": "https://huntspoint.nyc/?page_id=13"
   }
 ]
