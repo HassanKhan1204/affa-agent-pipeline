@@ -394,5 +394,60 @@
     "contact_email": "info@thepoint.org",
     "contact_phone": "(718) 542-4139",
     "contact_page": "https://huntspoint.nyc/?page_id=13"
+  },
+  {
+    "name": "Sky High Farm",
+    "type": "nonprofit",
+    "focus_area": "Regenerative farming, food sovereignty, and food access \u2014 donates 100% of food grown on its 40-acre Hudson Valley farm to food-insecure communities across NY State, trains new farmers, and runs public youth programs",
+    "partnership_angle": "A Farm For All could collaborate with Sky High Farm on joint food-access distribution runs to NYC and Hudson Valley partners, shared farmer-training programming, and cross-promotion of youth agricultural education experiences at both farms.",
+    "url": "https://www.skyhighfarm.org",
+    "contact_name": "",
+    "contact_email": "info@skyhighfarm.org",
+    "contact_phone": "518-398-1116",
+    "contact_page": "http://skyhighfarm.net/contact.html"
+  },
+  {
+    "name": "Phillies Bridge Farm Project",
+    "type": "nonprofit",
+    "focus_area": "Sustainable agriculture, food justice, CSA, and food-access programs (Farm to Families) serving food-insecure households in the Hudson Valley, plus farm-based education programs for children",
+    "partnership_angle": "A Farm For All could partner with Phillies Bridge on shared food-justice programming, cross-refer families to each other's CSA access programs, and collaborate on farm-based youth education across both sites.",
+    "url": "https://www.philliesbridge.org",
+    "contact_name": "Haley Tietz",
+    "contact_email": "foodjustice@philliesbridge.org",
+    "contact_phone": "845-256-9108",
+    "contact_page": "https://philliesbridge.org/contact/"
+  },
+  {
+    "name": "Teens for Food Justice",
+    "type": "nonprofit",
+    "focus_area": "Youth-led, school-based indoor hydroponic farming in NYC Title I schools (Bronx, Manhattan, Brooklyn, Queens), producing and distributing fresh produce to food-desert communities while training students as food-justice advocates",
+    "partnership_angle": "A Farm For All could host Teens for Food Justice student groups for farm visits and agricultural education days, and supply microgreens or herbs to complement TFFJ's school distributions in the Bronx and other NYC boroughs.",
+    "url": "https://teensforfoodjustice.org",
+    "contact_name": "",
+    "contact_email": "info@teensforfoodjustice.org",
+    "contact_phone": "833-524-2742",
+    "contact_page": "https://teensforfoodjustice.org/about/"
+  },
+  {
+    "name": "Newburgh Urban Farm and Food Initiative (NUFFI)",
+    "type": "nonprofit",
+    "focus_area": "Urban agriculture, food access, and food-system planning in Newburgh, NY \u2014 operates Downing Park Urban Farm, donates produce to local food pantries, runs youth employment and education programs, and leads the Newburgh Food Project",
+    "partnership_angle": "A Farm For All could supply NUFFI's network of seven Newburgh food pantries with fresh microgreens and herbs, and collaborate on joint youth agricultural employment and education programming between the two farms.",
+    "url": "https://www.newburghurbanfarmandfood.org",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "914-441-3616",
+    "contact_page": "https://www.newburghurbanfarmandfood.org/contact-us"
+  },
+  {
+    "name": "Hillside Food Outreach",
+    "type": "nonprofit",
+    "focus_area": "Home-delivery food pantry serving homebound, elderly, disabled, and low-income residents unable to access traditional pantries across Westchester and Putnam Counties (NY) and Fairfield County (CT) \u2014 including western Connecticut, directly adjacent to A Farm For All's service area",
+    "partnership_angle": "A Farm For All could supply Hillside Food Outreach with fresh microgreens, herbs, and produce from the farm to supplement the high-quality, nutritious food bags Hillside delivers to homebound neighbors in Putnam County and western CT.",
+    "url": "https://hillsidefoodoutreach.org",
+    "contact_name": "",
+    "contact_email": "info@hillsidefoodoutreach.org",
+    "contact_phone": "845-225-3393",
+    "contact_page": "https://hillsidefoodoutreach.org/contact/"
   }
 ]

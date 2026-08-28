@@ -383,5 +383,60 @@
     "contact_email": "",
     "contact_phone": "",
     "contact_page": "https://www.marcusfound.org/about"
+  },
+  {
+    "name": "NYS SNAP-Ed Community Growers Grant Program",
+    "type": "government",
+    "focus_area": "Garden-based nutrition education and food production in SNAP-eligible, underserved communities; supports nonprofit farms and community gardens growing fresh produce for local consumption",
+    "fit_reason": "A Farm For All's nonprofit community farm producing food for under-served communities in Dutchess County directly matches this program's mandate to fund food production and nutrition education in SNAP-eligible areas.",
+    "url": "https://agriculture.ny.gov/rfa-0346-snap-ed-community-growers-grant-program",
+    "contact_name": "Steven Affat",
+    "contact_email": "Steven.Affat@agriculture.ny.gov",
+    "contact_phone": "",
+    "contact_page": "https://agriculture.ny.gov/funding-opportunities"
+  },
+  {
+    "name": "Dutchess County Agency Partner Grant (APG) Program",
+    "type": "government",
+    "focus_area": "Youth development, nutrition assistance, mental health and wellness, workforce development, and other community needs for Dutchess County nonprofits",
+    "fit_reason": "As a 501(c)(3) in Dutchess County providing youth programming, food access, and community wellness, A Farm For All fits squarely within the APG's funded priority areas.",
+    "url": "https://www.dutchessny.gov/Departments/Planning/Agency-Partner-Grant-Program.htm",
+    "contact_name": "",
+    "contact_email": "communitygrants@dutchessny.gov",
+    "contact_phone": "845-486-3600",
+    "contact_page": "https://www.dutchessny.gov/Departments/County-Executive/County-Opens-Agency-Partner-Grant-Applications.htm"
+  },
+  {
+    "name": "Dyson Foundation \u2013 General Operating & Mini-Grant Program",
+    "type": "foundation",
+    "focus_area": "Basic human needs including food access, youth development, family stability, and health care for economically disadvantaged communities in the Mid-Hudson Valley (Dutchess, Columbia, Greene, Orange, Putnam, Ulster counties)",
+    "fit_reason": "A Farm For All's food access, youth programming, and community wellness work in Dutchess County aligns directly with the Dyson Foundation's core Mid-Hudson Valley funding priorities for economically marginalized communities.",
+    "url": "https://dysonfoundation.org/grantmaking/",
+    "contact_name": "Patrick Barnes",
+    "contact_email": "pbarnes@dyson.org",
+    "contact_phone": "845-677-0644",
+    "contact_page": "https://dysonfoundation.org/apply-report/"
+  },
+  {
+    "name": "United Way of Dutchess-Orange Region \u2013 Community Partner Grants",
+    "type": "foundation",
+    "focus_area": "Food security and access to healthy foods, education, and financial stability for low-income residents of Dutchess and Orange counties",
+    "fit_reason": "UWDOR's RFP explicitly targets food security and healthy food access in Dutchess County, matching A Farm For All's mission to grow and distribute food for under-served neighbors.",
+    "url": "https://www.uwdor.org/communitypartnergrants",
+    "contact_name": "",
+    "contact_email": "ci-inbox@uwdor.org",
+    "contact_phone": "845-471-1900",
+    "contact_page": "https://www.uwdor.org/grant"
+  },
+  {
+    "name": "Newman's Own Foundation \u2013 Food Justice for Kids Prize",
+    "type": "foundation",
+    "focus_area": "Food justice for children: nutrition education, school food access, growing and cooking healthy foods, and Indigenous food sovereignty for nonprofits, schools, and tribes nationwide",
+    "fit_reason": "A Farm For All's youth agricultural education and hands-on food-growing programs for under-served children align with the Prize's Nutrition Education & School Food track awarding up to $100K over two years.",
+    "url": "https://newmansown.org/food-justice-for-kids-prize/",
+    "contact_name": "",
+    "contact_email": "",
+    "contact_phone": "",
+    "contact_page": "https://newmansown.org/food-justice-for-kids-prize/"
   }
 ]
