@@ -9,7 +9,7 @@ builds a working CRM, and drafts personalized outreach — for
 [A Farm For All](https://www.afarmforallnewyork.org/), a real 46-acre
 nonprofit community farm in Webatuck, NY.
 
-Built for the **A Farm For All Impact Track** at [hackathon name].
+Built for the **A Farm For All Impact Track**.
 
 **Challenge:** How can a small community nonprofit use a team of AI agents
 to operate with the capabilities of a much larger organization?
